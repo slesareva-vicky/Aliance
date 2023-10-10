@@ -27,11 +27,13 @@ body {
   z-index: 2;
   position: fixed;
   border-bottom: 1px solid  rgba(235, 235, 240, 0.20);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, height 0.2s;
+
 }
 .navbar-light {
   background-color: #fff;
   color: #292D33;
+  height: 74px;
 }
 .navbar-light .header-logo-path {
   fill:#292D33;
@@ -59,7 +61,9 @@ z-index: 0;
 }
 
 .header-logo {
-  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
   border-right: 1px solid  rgba(235, 235, 240, 0.20);
   height: 100%;
 }
