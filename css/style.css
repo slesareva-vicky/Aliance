@@ -3,73 +3,74 @@
 }
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('../fonts/BebasNeueBook.woff') format('woff');
+  src: url('../fonts/BebasNeueBook.woff') format('woff');  
   font-weight: normal;
   font-style: normal;
-}
+  }
 body {
   font-family: 'Noto Sans', sans-serif;
+  width: 1920px; /*deleted*/
+  position: relative; /*deleted*/
 }
 .container {
   max-width: 1440px;
   margin: auto;
   overflow: hidden;
 }
-
-.navbar {
+.navbar {  
   display: flex;
   align-items: center;
   color: #fff;
   height: 94px;
-  width: 100%;
-  left: 0;
+  position: fixed;
+  position: absolute; /*deleted*/
+  width: 100%;  
+  left:0;
   top: 0;
   z-index: 2;
-  position: fixed;
-  border-bottom: 1px solid  rgba(235, 235, 240, 0.20);
+  border-bottom: 1px solid rgba(235, 235, 240, 0.20);
   transition: background-color 0.2s, height 0.2s;
-
 }
 .navbar-light {
   background-color: #fff;
-  color: #292D33;
+  color: #292d33;
   height: 74px;
 }
 .navbar-light .header-logo-path {
-  fill:#292D33;
+  fill: #292d33;
 }
-.header {
+.header {  
   padding-top: 94px;
   min-height: 100vh;
+  min-height: auto; /*? нужен ли ? deleted*/
 }
 .header-image {
   background-image: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom -55px;  
   position: relative;
 }
-.header-image:before {
-content: "";
-position: absolute;
-background: rgba(41, 45, 51, 0.60);
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 0;
+.header-image::before {
+  content: "";
+  position: absolute;  
+  background: rgba(4, 8, 14, 0.63); 
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;  
 }
-
 .header-logo {
   display: flex;
   align-items: center;
   padding: 0 50px;
-  border-right: 1px solid  rgba(235, 235, 240, 0.20);
+  border-right: 1px solid rgba(235, 235, 240, 0.20);
   height: 100%;
 }
 .header-nav {
-  display: flex; 
   flex-basis: 100%;
+  display: flex;
   list-style: none;
   padding: 0 50px;
   margin: 0;
@@ -78,25 +79,25 @@ z-index: 0;
   text-decoration: none;
   font-size: 16px;
   margin-right: 50px;
-  color: inherit;
+  color: inherit;  
 }
 .header-phone {
   flex-shrink: 0;
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
-  margin-right: 50px;
+  margin-right: 50px;  
 }
 .header-phone-link {
   text-decoration: none;
   font-size: 16px;
   color: inherit;
 }
-.button {
+.button { 
   font-weight: 600;
   font-size: 16px;
   line-height: 160%;
-  color: #fff;
+  color: #fff;    
   background: #3A71D1;
   padding: 25px 60px;
   border: none;
@@ -104,8 +105,9 @@ z-index: 0;
   cursor: pointer;
 }
 .navbar-button {
-  height: 100%; 
   flex-shrink: 0;
+  height: 100%;
+  padding: 25px 50px;
 }
 .separator {
   width: 150px;
@@ -119,107 +121,124 @@ z-index: 0;
   color: #fff;
 }
 .header-title {
-  max-width: 1080px;
-  font-family: 'Bebas Neue';
-  font-size: 80px;
-  line-height: 120%;
-  margin: 30px 0;
+  max-width: 1080px;  
+  font-family: 'Bebas Neue';  
+  font-weight: 600; 
+  font-size: 78px; 
+  line-height: 124%;
+  margin: 22px 0 38px 0;
+  letter-spacing: 1.6px; 
+  word-spacing: -2.3px; 
 }
 .header-text {
   max-width: 720px;
-  font-family: Noto Sans;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 160%;
   margin-bottom: 50px;
 }
 .header-features {
-  display: flex;
-  min-height: 168px;
+  display: flex;  
+  min-height: 166px;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 100px;  
+  margin-bottom: 0; 
   list-style: none;
   color: #fff;
   position: relative;
+  
 }
-.header-features-item {
-padding: 30px 50px;
-border: 1px solid rgba(235, 235, 240, 0.20);
+.header-features-item {  
+  padding: 31px 49px 0px; 
+  width: 288px;
+  border: 1px solid rgba(235, 235, 240, 0.20);  
 }
-.header-features-text{
+.header-features-icon {
+  display: inline-block;
+  height: 29px;
+}
+.header-button {
+  padding: 26px 60px;
+}
+.header-features-text { 
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
+  margin-bottom: 0;  
+  margin-top: 21px;
 }
 .header-features-item:not(:last-child) {
   border-right: none;
 }
-.seсtion {
-  display: block;
+.section {
   margin-top: 150px;
   margin-bottom: 150px;
 }
-.seсtion-title {
-font-family: Bebas Neue;
-font-size: 60px;
-line-height: 120%;
-color:  #292D33;
+.section-title{
+  font-family: 'Bebas Neue';
+  font-size: 57px;
+  line-height: 120%;
+  color: #292D33;
+  margin-top: 25px; 
+  letter-spacing: 1.7px;
+  word-spacing: -1.3px;  
 }
 .steps {
   display: flex;
-  list-style: none;
-  padding: 0;
-  gap: 30px;
+  list-style: none;  
+  padding: 7px 0 0;
+  gap: 30px;  
 }
 .steps-item {
   max-width: 330px;
 }
 .steps-num {
-color:  #5C8EE5;
-font-family: Bebas Neue;
-font-size: 48px;
-line-height: 120%;
-display: flex;
-align-items:center;
-}
-.steps-num:after {
-  content: "";
-  height: 1px;
-  background:#ebebf0;
-  width: 100%;
-  margin-left: 30px;
+  font-family: 'Bebas Neue';
+  font-size: 48px;  
+  line-height: 120%;  
+  font-weight: 600;
+  color: #5C8EE5;
+  display: flex;
+  align-items:center;  
 }
 .steps-title {
-font-size: 28px;
-font-weight: 400;
-line-height: 160%; 
-color: #292D33;
-margin-top: 30px;
-margin-bottom: 10px;
+  font-weight: 400;  
+  font-size: 28px;
+  line-height: 160%;
+  color: #292D33;  
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.steps-num::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #ebebf0;
+  margin-left: 30px;
 }
 .steps-text {
-color: #828A99;
-font-size: 16px;
 font-weight: 400;
-line-height: 160%; 
+font-size: 16px;
+line-height: 166%;
+color: #828A99;
 margin-top: 10px;
 margin-bottom: 20px;
+padding-right: 30px;
 }
 .steps-link {
-display: flex;
-align-items: center;
-text-decoration: none;
-font-weight: 600;
-font-size: 16px;
-line-height: 160%;
-color: #5C8EE5;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%; /* 25.6px */
+  color:#5C8EE5;
 }
-.steps-link:before{
+.steps-link:before {
   content:"";
   height: 1px;
-  background: #5C8EE5;
-  width: 40px;
+  background:#5C8EE5;
+  width: 40px;  
   margin-right: 20px;
 }
-
