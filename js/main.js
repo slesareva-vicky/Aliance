@@ -2,7 +2,7 @@ const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo-svg use");
 const mMenuToggle = document.querySelector (".mobile-menu-toggle");
 const menu= document.querySelector (".mobile-menu");
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.features-slider', {
   speed: 400,
   autoHeight: true,
   navigation: {
@@ -28,6 +28,27 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 5,
     },
   }
+});
+ 
+const swiperSteps = new Swiper(".steps-slider", {
+  speed: 400,
+ /* autoHeight: true,*/
+  navigation: {
+    nextEl: '.steps-button-next',
+    prevEl: '.steps-button-prev',
+  }, 
+  slidesPerView: 1,
+  breakpoints: {
+        576: {
+      slidesPerView: 2,
+    },
+      768: {
+      slidesPerView: 3, 
+    },
+      1024: {
+      slidesPerView: 4,
+    },
+  } 
 });
 
 const lightModeOn = () => { // Включаем светлый вариант меню
