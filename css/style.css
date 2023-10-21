@@ -225,7 +225,7 @@ body {
   gap: 1.875rem;  
 }
 .steps-item {
-  max-width: 20.625rem;
+  max-width: auto;
 }
 .steps-num {
   font-family: 'Bebas Neue';
