@@ -256,13 +256,14 @@ body {
   margin-left: 1.875rem;
 }
 .steps-text {
-font-weight: 400;
-font-size: 1rem;
-line-height: 166%;
-color: #828A99;
-margin-top: .625rem;
-margin-bottom: 1.25rem;
-padding-right: 1.875rem;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 166%;
+  color: #828A99;
+  margin-top: .625rem;
+  margin-bottom: 1.25rem;
+  padding-right: 1.875rem;
 }
 .steps-link {
   display: flex;
