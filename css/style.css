@@ -70,11 +70,15 @@ body {
   border-right: 1px solid rgba(235, 235, 240, 0.20);
   height: 100%;
 }
+
 .logo-svg {
   width: 8.75rem;
   height: 2.75rem;
 }
-  
+.logo-svg.logo{
+  display: none;
+  }
+    
 .header-nav {
   flex-basis: 100%;
   display: flex;

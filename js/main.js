@@ -1,5 +1,6 @@
 const navbar = document.querySelector(".navbar");
-const logo = document.querySelector(".logo-svg use");
+const logoLight = document.querySelector(".logo-light");
+const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector (".mobile-menu-toggle");
 const menu= document.querySelector (".mobile-menu");
 const swiper = new Swiper('.features-slider', {
@@ -53,11 +54,13 @@ const swiperSteps = new Swiper(".steps-slider", {
 
 const lightModeOn = () => { // Включаем светлый вариант меню
   navbar.classList.add("navbar-light");
-  logo.href.baseVal = "img/sprite.svg#logo";
+  logo.style.display = "block";
+  logoLight.style.display = "none";
 }
 const lightModeOff = () => { // ВЫключаем светлый вариант меню
   navbar.classList.remove("navbar-light");
-  logo.href.baseVal = "img/sprite.svg#logo-light";
+  logo.style.display = "";
+  logoLight.style.display = "";
 }
 const switchMode = () => {  //Переключатель вариантов меню 
   window.scrollY > 1 ? lightModeOn() : lightModeOff();
