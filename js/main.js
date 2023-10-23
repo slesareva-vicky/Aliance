@@ -1,8 +1,8 @@
 const navbar = document.querySelector(".navbar");
 const logoLight = document.querySelector(".logo-light");
 const logo = document.querySelector(".logo");
-const mMenuToggle = document.querySelector (".mobile-menu-toggle");
-const menu= document.querySelector (".mobile-menu");
+const mMenuToggle = document.querySelector(".mobile-menu-toggle");
+const menu = document.querySelector(".mobile-menu");
 const swiper = new Swiper('.features-slider', {
   speed: 400,
   autoHeight: true,
@@ -18,63 +18,66 @@ const swiper = new Swiper('.features-slider', {
     },
     // when window width is >= 768px
     768: {
-      slidesPerView: 3, 
+      slidesPerView: 3,
     },
     // when window width is >= 1024px
     1024: {
       slidesPerView: 4,
     },
-     // when window width is >= 1200px
-     1200: {
+    // when window width is >= 1200px
+    1200: {
       slidesPerView: 5,
     },
   }
 });
- 
 const swiperSteps = new Swiper(".steps-slider", {
   speed: 400,
- /* autoHeight: true,*/
+  /*autoHeight: true,*/
   navigation: {
     nextEl: '.steps-button-next',
     prevEl: '.steps-button-prev',
-  }, 
+  },
   slidesPerView: 1,
   breakpoints: {
-        576: {
+    576: {
       slidesPerView: 2,
     },
-      768: {
-      slidesPerView: 3, 
+    768: {
+      slidesPerView: 3,
     },
-      1024: {
+    1024: {
       slidesPerView: 4,
     },
-  } 
+  }
 });
 
-const lightModeOn = () => { // Включаем светлый вариант меню
+const lightModeOn = () => {  // включаем светлый вариант меню
   navbar.classList.add("navbar-light");
   logo.style.display = "block";
   logoLight.style.display = "none";
 }
-const lightModeOff = () => { // ВЫключаем светлый вариант меню
+
+const lightModeOff = () => {  // выключаем светлый вариант меню
   navbar.classList.remove("navbar-light");
   logo.style.display = "";
   logoLight.style.display = "";
 }
-const switchMode = () => {  //Переключатель вариантов меню 
+
+const switchMode = () => {  // переключатель вариантов меню
   window.scrollY > 1 ? lightModeOn() : lightModeOff();
 }
-const openMenu = () => { //Открытие меню 
- menu.classList.add("is-open") //Подключаем стили открытого меню
- mMenuToggle.classList.add("close-menu"); //Устанавливает стиль кнопки "крестик"
- document.body.style.overflow = "hidden";  //запрет прокрутки документа
- lightModeOn();
+
+const openMenu = () => {  // открытие меню
+  menu.classList.add("is-open");  // подключаем класс (стили)
+  mMenuToggle.classList.add("close-menu");   // устанавливаем стиль кнопки - крестик
+  document.body.style.overflow = "hidden";   // запрет прокрутки документа
+  lightModeOn();
 }
-const closeMenu = () => { //Закрытие меню 
-  menu.classList.remove("is-open") //Отключаем стили открытого меню
-  mMenuToggle.classList.remove("close-menu"); //Восстанавливаем стиль кнопки "3 полоски"
-  document.body.style.overflow = "" ; //восстанавливаем по умолчанию прокрутку документа
+
+const closeMenu = () => {  // закрытие меню
+  menu.classList.remove("is-open");  // отключаем класс (стили)
+  mMenuToggle.classList.remove("close-menu");   // восстанавливаем стиль кнопки - три полоски
+  document.body.style.overflow = "";   // восстанавливаем по-умол. прокрутку документа  
   switchMode();
 }
 
