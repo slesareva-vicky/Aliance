@@ -78,7 +78,7 @@ body {
 }
 .header-nav {
   flex-basis: 100%;
-  align-items:center;
+  align-items:center; 
   height: 100%; 
   display: flex;
   list-style: none;
@@ -95,15 +95,15 @@ body {
   margin-right: 4%;
 }
 .header-nav-link {
-  display: flex;
-  height: 100%;
+  display: flex; 
+  height: 100%; 
   align-items: center; 
   text-decoration: none;
   font-size: 1rem;  
   color: inherit;    
   position: relative; 
 }
-.header-nav-link::after {  
+.header-nav-link::after { 
   content: "";
   width: 0;
   height: 2px;
@@ -114,7 +114,7 @@ body {
   right: 0;
   left: auto;
 }
-.header-nav-link:hover::after {  
+.header-nav-link:hover::after { 
   width: 100%;
   right: auto;
   left: 0;
@@ -205,6 +205,7 @@ body {
 .header-features-icon {
   display: inline-block;
   height: 1.8125rem;
+
 }
 .slider-buttons {
   display: none;
@@ -220,6 +221,14 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
+.swiper-button-disabled,
+.swiper-button-disabled {
+
+  /*pixel*/
+  opacity: 0.4;
+}
+
 .header-button {
   padding: 1.625rem 3.75rem;
 }
@@ -320,7 +329,7 @@ overflow: hidden;
   background:#5C8EE5;
   width: 40px;  
   margin-right: 1rem; 
-  transition: width 0.2s; 
+  transition: width 0.2s;
 }
 .steps-link:hover::before { 
   width: 60px;
@@ -353,13 +362,15 @@ overflow: hidden;
   transition: border 0.2s; 
 
   /*pixel*/
+  display: block;
   flex-basis: 33.333%;
+  min-height: 590px; /* для картинки */
 }
-.card:hover { 
+.card:hover {  
   border-color: #5C8EE6;
 }
-.card-content {
-  padding: 2.5rem 3.125rem;
+.card-content {  
+  padding: 2.5rem 3.125rem;  
 }
 .card-title {
   font-weight: 400;
@@ -368,12 +379,12 @@ overflow: hidden;
   color: #292D33;
   margin-top: 0;
   margin-bottom: 0.625rem;  
-  transition: color 0.2s;
+  transition: color 0.2s; 
 
   /*pixel*/
   margin-bottom: -0.1rem;
 }
-.card:hover .card-title {  
+.card:hover .card-title { 
   color: #5C8EE6;
 }
 
@@ -383,8 +394,8 @@ overflow: hidden;
   color: #828A99;
   margin-bottom: 24.625rem;
 
-  /*pixel*/
-  margin-bottom: 22.1625rem;
+  /*pixel*/  
+  margin-bottom: 0;   
 }
 .card-image {
   position: absolute;
@@ -397,68 +408,19 @@ overflow: hidden;
   left: 0 ;
   right: auto;
   width: 100%;
+  max-height: 300px;
 }
-
-/*mywork-begin*/
-.section.trademark  {
-  margin-top: 9.5rem;
-}
-.cards-trademark {
-  display: flex;  
-  flex-wrap: wrap;
-  margin-top: 3.5rem; 
-}
-  
-.card-trademark {
-  display: flex;
-  text-decoration: none;
-  flex-basis: 50%;
-  border: 1px solid #ebebf0;
-  position: relative;
-  transition: border 0.2s;
-}
-.card-trademark:hover {  
-  border-color: #5C8EE6;
-}
-.card-trademark-image {
-  display: block;
-  margin: 3.125rem;
-  position: absolute;
-  top: 0;
-  left: 0;  
-  width: 11.25rem;
-  height: 11.25rem;
-  z-index: 0;  
-}
-.card-trademark-content {    
-  padding: 3.125rem 4.125rem 3.4375rem 17.5rem;
-}
-.card-trademark-title {
-  font-weight: 400;
-  font-size: 1.725rem;
-  line-height: 165%; 
-  color: #292D33;
-  margin-top: 0;
-  margin-bottom: 0;  
-  transition: color 0.2s;   
-}
-.card-trademark:hover .card-trademark-title { 
-  color: #5C8EE5;  
-}
-.card-trademark-text {
-  font-size: 1rem;  
-  line-height: 160%;
-  color: #828A99;
-  margin-top: 0.725rem;
-}
-/*mywor-end*/
 
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
   }
   .header-image {
-    background-position: center;
+    background-position: center;   
+  }  
+  .card {
+    /*pixel*/
+    min-height: 500px;
   }  
 }
 @media (max-width: 1460px) {
@@ -466,10 +428,10 @@ overflow: hidden;
     font-size: 13px;
   }
   .header-logo {
-    padding: 2rem;    
+    padding: 2rem;       
   }    
   .logo-svg {
-    max-width: 6rem;
+    width: 6rem;    
   }
   
   .header-nav {
@@ -481,6 +443,10 @@ overflow: hidden;
   .header-phone {
     margin-right: 2rem;
   }
+  .card {
+    /*pixel*/
+    min-height: 450px;
+  }  
 }
 
 @media (max-width: 1200px) {
@@ -491,7 +457,10 @@ overflow: hidden;
     display: none;
   } 
   .navbar {
-    height: 5rem;
+    height: 5.8rem; 
+
+    /*pixel*/
+    height: 5.667rem; 
   }
   .navbar-button {
     padding-left: 2rem;
@@ -516,6 +485,23 @@ overflow: hidden;
   .container {
     max-width: 60rem;
   }
+  .header-image { 
+    
+    /*pixel*/
+    background-image: url("../img/main_img.png");    
+    background-position: center top;
+  }
+  .header-image::before {  
+    
+    /*pixel*/ 
+    background: rgba(4, 8, 14, 0.5);     
+  }
+  .separator {
+
+    /*pixel*/ 
+    width: 8.334rem;
+  }
+
   .header-nav {
     display: none;
   }
@@ -523,13 +509,27 @@ overflow: hidden;
     flex-grow: 1;
     justify-content: center;
   }
+  .logo-svg {  
+    width: 10.75rem;  
+    
+    /*pixel*/     
+    height: 3.143rem;
+  }
+  .navbar-button { 
+    padding-left: 1.75rem;  
+    padding-right: 1.75rem;
+
+    /*pixel*/    
+    padding-left:  2.334rem;  
+    padding-right: 2.334rem;
+  }
   .mobile-menu-toggle {
     width: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;    
     justify-content: space-between;
-    padding: 1.8rem;
+    padding: 2.3rem 2.5rem;  
     border-right: 1px solid rgba(235,235,240,0.2);
   }
   .navbar-light .mobile-menu-line {
@@ -551,6 +551,9 @@ overflow: hidden;
   .navbar-button .button-icon {
     display:block;
     fill:#fff;
+
+    /*pixel*/
+    transform: scale(0.7,0.7);
   }
   .mobile-menu {    
     position: fixed;    
@@ -641,9 +644,7 @@ overflow: hidden;
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(45deg);
   }  
-  .card-trademark {  /*mywork*/
-    flex-basis: 66%;   
-  }
+
 }
 
 @media (max-width: 768px) {  
@@ -652,27 +653,157 @@ overflow: hidden;
   }
   .header-title {
     font-size: 4rem;
+
+    /* pixel */    
+    font-weight: 400;     
+    line-height: 120%;    
+    letter-spacing: 0.5px; 
+    margin-bottom: 0.833rem; 
   }
   .header-content {
-    padding-top: 3rem;
+    padding-top: 4rem; 
+  }
+
+  .header-text {
+
+    /* pixel */    
+    font-size: 1.166rem;
+    margin-bottom: 2.5rem;
+  }
+  .header-button {
+
+    /* pixel */   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.166rem;
+    background: #5C8EE5;        
+  }
+  
+  .header-features {
+
+    /*pixel*/    
+    margin-top: 4.167rem;
+    min-height: 11.667rem;
+  }
+  .header-features-item {
+    padding: 1.583rem 2.417rem;    
+    width: 20.834rem; 
+  }
+  .header-features-icon {   
+    height: 3rem;
+  }
+  .header-features-text {
+
+    /*pixel*/      
+    margin-top: 1.43rem;    
+    font-size: 1.167em;
+    line-height: 155%;    
+  }
+  
+  .slider-button-prev svg,
+  .slider-button-next svg{    
+
+    /*pixel*/      
+    width: 3.26rem;
+  }
+
+  .section.section-light {
+    
+    /*pixel*/      
+    margin-top: 8.221rem;
+    margin-bottom: 11rem;
+  }
+  .section-light .container .section-title {  
+
+    /*pixel*/
+    font-size: 2.712rem;
+  }
+  
+  .steps {
+
+    /*pixel*/    
+    gap: 0;
+    margin-bottom: 1.5rem;
+  }
+  .steps-item {
+
+    /*pixel*/
+    max-width: 27.5rem;
+    border-right: 2.5rem solid rgba(235, 235, 240, 0);    
+  }
+  
+  .steps-num {
+
+    /*pixel*/
+    font-size: 4rem;
+  }
+
+  .steps-title {
+
+    /*pixel*/    
+    font-size: 1.65rem;    
+    margin-top: 1.07rem;
+    margin-bottom: 0.834rem;
+  }
+  .steps-text { 
+
+    /*pixel*/    
+    font-size: 1.167rem;       
+    margin-top: -0.5rem;
+    margin-bottom: 2.05rem;        
+  }
+  .steps-link {
+
+    /*pixel*/    
+    font-size: 1.2rem;
+    margin-left: 0.8rem;  
+  }
+
+  .section.production .container .section-title {    
+
+    /*pixel*/    
+    font-size: 2.7rem;
+    margin-bottom: 3rem;    
+  }
+  .cards {
+    /*pixel*/      
+    border-top: 1px solid #ebebf0;;
   }
   .card {
     flex-basis: 100%;   
-  }  
-  
-  .card-trademark {  /*mywork*/
-    flex-basis: 100%;   
+
+    /*pixel*/    
+    min-height: 428.5px; /* для картинки */        
+    border-top-width: 0;    
+  } 
+  .card-content {
+    padding: 0.7rem 2.5rem;
+
+    /*pixel*/    
+    padding: 1.6rem 2.55rem;
+  } 
+
+  .card-title {
+
+    /*pixel*/    
+    font-size: 1.65rem;     
   }
+  .card-text {
+
+    /*pixel*/    
+    font-size: 1.155rem;
+    margin-top: 0.9rem;               
+  }
+  
 }
 
 @media (max-width: 576px) {  
   .container {
     max-width: 90%;
+
+    /* pixel */   
+    max-width: 92%;    
   }
-  .header-title {
-    font-size: 2rem;
-  }
-  .header-content {
-    padding-top: 2rem;
-  }  
 }

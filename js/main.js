@@ -3,6 +3,7 @@ const logoLight = document.querySelector(".logo-light");
 const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
+
 const swiper = new Swiper('.features-slider', {
   speed: 400,
   autoHeight: true,
@@ -10,7 +11,7 @@ const swiper = new Swiper('.features-slider', {
     nextEl: '.slider-button-next',
     prevEl: '.slider-button-prev',
   },
-  slidesPerView: 1,
+  slidesPerView: 'auto', 
   breakpoints: {
     // when window width is >= 576px
     576: {
@@ -30,14 +31,14 @@ const swiper = new Swiper('.features-slider', {
     },
   }
 });
+
 const swiperSteps = new Swiper(".steps-slider", {
   speed: 400,
-  /*autoHeight: true,*/
   navigation: {
     nextEl: '.steps-button-next',
     prevEl: '.steps-button-prev',
   },
-  slidesPerView: 1,
+  slidesPerView: 'auto', 
   breakpoints: {
     576: {
       slidesPerView: 2,
@@ -63,7 +64,7 @@ const lightModeOff = () => {  // выключаем светлый вариан�
   logoLight.style.display = "";
 }
 
-const switchMode = () => {  // переключатель вариантов меню
+const switchMode = () => {  // переключатель вариантов меню  
   window.scrollY > 1 ? lightModeOn() : lightModeOff();
 }
 
