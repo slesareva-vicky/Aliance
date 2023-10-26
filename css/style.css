@@ -411,6 +411,76 @@ overflow: hidden;
   max-height: 300px;
 }
 
+.section.trademark {
+
+  /*pixel*/
+  margin-top: 9.565rem;
+}
+.section.trademark .container .section-title { 
+  
+  /*pixel*/
+  margin-bottom: 3.75rem;  
+}
+
+.trademark-cards {
+  display: flex;    
+}
+.trademark-card {
+  flex-basis: 50%;
+  text-decoration: none; 
+  border: 1px solid #ebebf0;  
+  transition: border 0.2s; 
+  padding: 3.125rem; 
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 3.125rem;
+  grid-template-areas: 
+    "logo title"
+    "logo text";
+
+  /*pixel*/
+  min-height: 250px;    
+}
+.trademark-card:hover {  
+  border-color: #5C8EE6;
+}
+.trademark-card-logo {
+  width: 11.25rem;
+  fill: #828a99;
+  grid-area: logo;  
+
+  /*pixel*/
+  height: 11.25rem;
+}
+.trademark-card:hover .trademark-card-logo {
+   fill:#5C8EE6;
+}
+
+.trademark-card-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.75rem;    
+  line-height: 160%;
+  color: #292D33;
+  grid-area: title;  
+  transition: color 0.2s;   
+}
+.trademark-card:hover .trademark-card-title { 
+  color: #5C8EE6;
+}
+.trademark-card-text {    
+  font-weight: 400;
+  font-size: 1rem;     
+  line-height: 160%;
+  color: #828A99;
+  grid-area: text;
+  margin-top: 0.625rem;
+
+  /*pixel*/
+  padding-right: 3.125rem;  
+}
+
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
@@ -457,7 +527,7 @@ overflow: hidden;
     display: none;
   } 
   .navbar {
-    height: 5.8rem; 
+    height: 5.8rem;
 
     /*pixel*/
     height: 5.667rem; 
@@ -476,6 +546,10 @@ overflow: hidden;
   .card {
     flex-basis: 50%;   
   }  
+  
+  .trademark-card {    
+    grid-template-columns: auto auto;   
+  }
 }
 
 @media (max-width: 992px) {
@@ -512,7 +586,7 @@ overflow: hidden;
   .logo-svg {  
     width: 10.75rem;  
     
-    /*pixel*/     
+    /*pixel*/         
     height: 3.143rem;
   }
   .navbar-button { 
@@ -639,12 +713,18 @@ overflow: hidden;
     display: none;
   }
   .close-menu .mobile-menu-line:nth-child(1) {
-    transform: rotate(-45deg);
+    transform: translateY(1px) rotate(-45deg); 
   }
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(45deg);
-  }  
+  }    
 
+  .trademark-cards {    
+    flex-direction: column;
+  }
+  .trademark-title-desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {  
@@ -796,7 +876,7 @@ overflow: hidden;
     font-size: 1.155rem;
     margin-top: 0.9rem;               
   }
-  
+    
 }
 
 @media (max-width: 576px) {  
@@ -805,5 +885,61 @@ overflow: hidden;
 
     /* pixel */   
     max-width: 92%;    
+  } 
+  
+  .section.trademark {
+    
+    /* pixel */   
+    margin-top: -0.7645rem;
+  }
+  .section.trademark .container .section-title { 
+
+    /*pixel*/
+    font-size: 2.879rem;    
+    letter-spacing: 1.1px;        
+  }
+  .trademark-cards { 
+    
+    /*pixel*/
+    margin-top: -1rem;
+    border-bottom: 1px solid #ebebf0;
+  }
+  .trademark-card {    
+    grid-template-columns: 8.334rem auto;    
+    grid-template-rows: 8.334rem auto;    
+    grid-template-areas: 
+      "logo title"
+      "text text";
+
+      /*pixel*/
+      grid-column-gap: 2.417rem;
+      grid-row-gap: 1.585rem;
+      border-top-width: 0;  
+      padding: 2.5rem;
+      padding-bottom: 2.334rem;
+      
+  }
+  .trademark-card-logo {
+
+    /*pixel*/
+    width: 8.333rem;     
+    height: 8.333rem;
+  }
+
+  .trademark-card-title {
+
+    /*pixel*/
+    font-size: 1.667rem;
+    line-height: 130%;       
+  }
+  
+  .trademark-card-text {  
+
+    /*pixel*/
+    font-size: 1.167rem;     
+    margin: 0;
+  
+    /*pixel*/
+    padding-right: 0;    
   }
 }

@@ -11,7 +11,8 @@ const swiper = new Swiper('.features-slider', {
     nextEl: '.slider-button-next',
     prevEl: '.slider-button-prev',
   },
-  slidesPerView: 'auto', 
+  slidesPerView: 'auto',
+
   breakpoints: {
     // when window width is >= 576px
     576: {
@@ -38,7 +39,7 @@ const swiperSteps = new Swiper(".steps-slider", {
     nextEl: '.steps-button-next',
     prevEl: '.steps-button-prev',
   },
-  slidesPerView: 'auto', 
+  slidesPerView: 'auto',
   breakpoints: {
     576: {
       slidesPerView: 2,
@@ -65,6 +66,7 @@ const lightModeOff = () => {  // выключаем светлый вариан�
 }
 
 const switchMode = () => {  // переключатель вариантов меню  
+  console.log(window.scrollY);
   window.scrollY > 1 ? lightModeOn() : lightModeOff();
 }
 
