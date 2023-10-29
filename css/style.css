@@ -205,7 +205,7 @@ body {
   line-height: 124%;
   margin: 1.375rem 0 2.375rem 0;
   letter-spacing: 1.6px;
-  word-spacing: -2.3px;
+  word-spacing: -2.2992px;
 }
 
 .header-text {
@@ -298,7 +298,7 @@ body {
   color: #292D33;
   margin-top: 1.5625rem;
   letter-spacing: 1.6992px;
-  word-spacing: -1.3px;
+  word-spacing: -1.3008px;
 }
 
 .section.production .container .section-title {
@@ -389,21 +389,25 @@ body {
   width: 60px;
 }
 
-.steps-buttons {
-  display: none;
-  height: 40px;
+.primary-buttons-wrapper {
+  height: 3.75rem;
   justify-content: flex-end;
+  display: flex;
 }
 
-.steps-button-prev,
-.steps-button-next {
+.primary-button-prev,
+.primary-button-next {
   background-color: #5C8EE6;
   height: 100%;
-  width: 60px;
+  width: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.steps-buttons {
+  display: none;
 }
 
 .cards {
@@ -442,7 +446,7 @@ body {
   line-height: 140%;
   color: #292D33;
   margin-top: 0;
-  margin-bottom: 0.625rem;
+  margin-bottom: .625rem;
   transition: color 0.2s;
 
   /*pixel*/
@@ -541,7 +545,7 @@ body {
   line-height: 160%;
   color: #828A99;
   grid-area: text;
-  margin-top: 0.625rem;
+  margin-top: .625rem;
 
   /*pixel*/
   padding-right: 3.125rem;
@@ -684,6 +688,75 @@ body {
   filter: none;
 }
 
+.section.blog {
+
+  /*pixel*/
+  margin-top: 152px;
+}
+
+.section.blog .container .section-title {
+
+  /*pixel*/
+  margin-bottom: 59px;
+}
+
+.blog-card {
+  display: flex;
+  position: relative;
+  min-height: 25rem;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.blog-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(41, 45, 51, 0.60);
+  z-index: -1;
+}
+
+.blog-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.blog-card-title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 160%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.blog-card-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 0;
+
+  /*pixel*/
+  margin-bottom: 0;
+}
+
+.blog-slider-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
@@ -738,12 +811,21 @@ body {
   }
 
   .navbar-button {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .slider-buttons {
     display: flex;
+  }
+
+  .primary-buttons-wrapper {
+    height: 2.5rem;
+  }
+
+  .primary-button-prev,
+  .primary-button-next {
+    width: 3.75rem;
   }
 
   .steps-buttons {
@@ -777,7 +859,7 @@ body {
 
     /*pixel*/
     font-size: 3rem;
-    letter-spacing: 0.4px;
+    letter-spacing: .4px;
   }
 
   .clients-list-item {
@@ -791,6 +873,10 @@ body {
 @media (max-width: 992px) {
   html {
     font-size: 12px;
+  }
+
+  .not992 {
+    display: none;
   }
 
   .container {
@@ -980,6 +1066,15 @@ body {
     transform: rotate(45deg);
   }
 
+  .primary-buttons-wrapper {
+    height: 3.333rem;
+  }
+
+  .primary-button-prev,
+  .primary-button-next {
+    width: 5rem;
+  }
+
   .trademark-cards {
     flex-direction: column;
   }
@@ -1001,6 +1096,43 @@ body {
     width: 50px;
     height: 50px;
   }
+
+  .section.blog {
+
+    /*pixel*/
+    margin-top: 8.25rem;
+  }
+
+  .section.blog .container .section-title {
+
+    /*pixel*/
+    margin-bottom: 30px;
+    font-size: 36px;
+    margin-top: 17px;
+    letter-spacing: normal;
+    word-spacing: 0.69px
+  }
+
+  .blog-card {
+
+    /*pixel*/
+    min-height: 196px;
+    padding: 20px 21px 21px 20px;
+  }
+
+  .blog-slider-footer {
+
+    /*pixel*/
+    margin-top: 19px;
+  }
+
+  .blog-card-title {
+
+    /*pixel*/
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1014,8 +1146,8 @@ body {
     /* pixel */
     font-weight: 400;
     line-height: 120%;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.833rem;
+    letter-spacing: .5008px;
+    margin-bottom: .833rem;
   }
 
   .header-content {
@@ -1109,7 +1241,7 @@ body {
     /*pixel*/
     font-size: 1.65rem;
     margin-top: 1.07rem;
-    margin-bottom: 0.834rem;
+    margin-bottom: .834rem;
   }
 
   .steps-text {
@@ -1153,7 +1285,7 @@ body {
   }
 
   .card-content {
-    padding: 0.7rem 2.5rem;
+    padding: .7rem 2.5rem;
 
     /*pixel*/
     padding: 1.6rem 2.55rem;
@@ -1169,7 +1301,7 @@ body {
 
     /*pixel*/
     font-size: 1.155rem;
-    margin-top: 0.199rem;
+    margin-top: .199rem;
     padding-right: 0;
   }
 
@@ -1189,13 +1321,13 @@ body {
   .founder-content-wrapper {
 
     /*pixel*/
-    margin-top: 0.875rem;
+    margin-top: .875rem;
   }
 
   .founder-content .section-title {
     font-size: 3rem;
-    letter-spacing: 0.4px;
-    word-spacing: -0.3px;
+    letter-spacing: .4px;
+    word-spacing: -0.2992px;
     margin-bottom: 0;
   }
 
@@ -1255,7 +1387,7 @@ body {
 
     /*pixel*/
     font-size: 2.879rem;
-    letter-spacing: 1.1px;
+    letter-spacing: 1.1008px;
   }
 
   .trademark-cards {

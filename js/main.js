@@ -53,6 +53,21 @@ const swiperSteps = new Swiper(".steps-slider", {
   }
 });
 
+const swiperBlog = new Swiper(".blog-slider", {
+  speed: 400,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.blog-button-next',
+    prevEl: '.blog-button-prev',
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+    },
+  }
+});
+
 const lightModeOn = () => {  // включаем светлый вариант меню
   navbar.classList.add("navbar-light");
   logo.style.display = "block";
@@ -65,8 +80,7 @@ const lightModeOff = () => {  // выключаем светлый вариан�
   logoLight.style.display = "";
 }
 
-const switchMode = () => {  // переключатель вариантов меню  
-  console.log(window.scrollY);
+const switchMode = () => {  // переключатель вариантов меню    
   window.scrollY > 1 ? lightModeOn() : lightModeOff();
 }
 
