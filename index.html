@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="img/aliance.ico" type="image/x-icon" />
     <title>Aliance Production</title>
   </head>
 
@@ -176,7 +177,7 @@
         <!-- /.header-content -->
 
         <!-- основной блок слайдера -->
-        <div class="swiper features-slider">
+        <div class="swiper header-features-slider">
           <!-- обвертка слайдера -->
           <ul class="swiper-wrapper header-features">
             <!-- слайды -->
@@ -219,19 +220,19 @@
           </ul>
           <!-- /.header-feature -->
           <!-- кнопки навигации вперед/назад -->
-          <div class="slider-buttons">
-            <div class="slider-button-prev">
+          <div class="header-features-buttons transparent-buttons-wrapper">
+            <div class="header-features-button-prev transparent-button-prev">
               <svg width="36" height="24">
                 <use href="img/sprite.svg#arrow-prev"></use>
               </svg>
             </div>
-            <div class="slider-button-next">
+            <div class="header-features-button-next transparent-button-next">
               <svg width="36" height="24">
                 <use href="img/sprite.svg#arrow-next"></use>
               </svg>
             </div>
           </div>
-          <!-- /.slider-buttons -->
+          <!-- /.header-features-buttons -->
         </div>
       </div>
       <!-- /.container -->
@@ -279,7 +280,7 @@
           </ol>
           <div class="steps-buttons primary-buttons-wrapper">
             <div class="steps-button-prev primary-button-prev">
-              <svg width="36" height="24">
+              <svg>
                 <use href="img/sprite.svg#arrow-prev"></use>
               </svg>
             </div>
@@ -417,14 +418,14 @@
     </section>
 
     <section class="section founder">
-      <div class="container container-founder-img">
+      <div class="container-vs founder-img">
         <img
           src="img/founder.jpg"
           alt="Фото основателя"
           class="founder-photo"
         />
       </div>
-      <!-- /.container container-founder-img -->
+      <!-- /.container-vs founder-img -->
       <div class="container">
         <div class="founder-content-wrapper">
           <div class="founder-content">
@@ -450,9 +451,11 @@
                 дальнейших направлений развития.
               </p>
             </div>
-            <a href="#" class="button-link founder-button-link">
-              <span class="founder-button-link">Подробнее о компании</span>
-              <span class="founder-button-link-mobile">О нашей миссии</span>
+            <a href="#" class="button-link founder-button-link"
+              >Подробнее о компании
+            </a>
+            <a href="#" class="button-link founder-button-link-mobile">
+              О нашей миссии
             </a>
           </div>
         </div>
@@ -612,7 +615,7 @@
         <h2 class="section-title">Блог экспертов в области производства</h2>
 
         <div class="swiper blog-slider">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper blog-wrapper">
             <a href="#" class="swiper-slide blog-card">
               <img
                 src="img/blog/blog-photo1.jpg"
@@ -622,7 +625,7 @@
               <h3 class="blog-card-title">
                 Современная методология разработки одухотворила всех причастных
               </h3>
-              <p class="blog-card-text not992">
+              <p class="blog-card-text not576">
                 Действия представителей оппозиции, превозмогая сложившуюся
                 непростую экономическую ситуацию, в равной степени
                 предоставлены...
@@ -666,7 +669,7 @@
                 </svg>
               </div>
               <div class="blog-button-next primary-button-next">
-                <svg width="36" height="24">
+                <svg>
                   <use href="img/sprite.svg#arrow-next"></use>
                 </svg>
               </div>
@@ -678,6 +681,62 @@
       <!-- /.container -->
     </section>
     <!-- /.section blog -->
+
+    <section class="cta bg-grey">
+      <div class="container-vs cta-image-wrapper">
+        <img src="img/cta.png" alt="call to action" class="cta-image not992" />
+
+        <div class="container cta-form-wrapper">
+          <form action="#" class="cta-form">
+            <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
+            <p class="cta-form-text">
+              Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
+              ответит на все интересующие вопросы и поможем даже в самых сложных
+              случаях!
+            </p>
+            <div class="input-group-wrapper">
+              <div class="input-group">
+                <input
+                  id="user-name"
+                  type="text"
+                  class="input"
+                  placeholder=" "
+                />
+                <label class="input-group-label" for="user-name">Имя</label>
+              </div>
+              <div class="input-group">
+                <input
+                  id="user-phone"
+                  type="tel"
+                  class="input"
+                  placeholder="+__(___)__-__-___"
+                />
+                <label class="input-group-label" for="user-phone"
+                  >Номер телефона
+                </label>
+              </div>
+            </div>
+            <!-- /.input-group-wrapper -->
+            <div class="cta-form-footer">
+              <button type="submit" class="button cta-form-button">
+                Отправить заявку
+              </button>
+              <div class="notify">
+                <svg width="14" height="14" class="notify-icon">
+                  <use href="img/sprite.svg#shield"></use>
+                </svg>
+                <p class="notify-text">
+                  Обращаясь к нам вы получаете не только профессиональную
+                  работу, но и абсолютную конфиденциальность информации!
+                </p>
+              </div>
+            </div>
+            <!-- /.cta-form-footer -->
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /.cta -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

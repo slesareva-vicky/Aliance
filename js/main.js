@@ -4,12 +4,12 @@ const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
 
-const swiper = new Swiper('.features-slider', {
+const swiper = new Swiper('.header-features-slider', {
   speed: 400,
   autoHeight: true,
   navigation: {
-    nextEl: '.slider-button-next',
-    prevEl: '.slider-button-prev',
+    nextEl: '.header-features-button-next',
+    prevEl: '.header-features-button-prev',
   },
   slidesPerView: 'auto',
 
@@ -55,14 +55,30 @@ const swiperSteps = new Swiper(".steps-slider", {
 
 const swiperBlog = new Swiper(".blog-slider", {
   speed: 400,
-  spaceBetween: 30,
   navigation: {
     nextEl: '.blog-button-next',
     prevEl: '.blog-button-prev',
   },
   slidesPerView: 1,
   breakpoints: {
-    1024: {
+    760: {
+      spaceBetween: 3,
+      slidesPerView: 1.1,
+    },
+    800: {
+      spaceBetween: 5,
+      slidesPerView: 1.25,
+    },
+    880: {
+      spaceBetween: 10,
+      slidesPerView: 1.5,
+    },
+    992: {
+      spaceBetween: 20,
+      slidesPerView: 1.75,
+    },
+    1200: {
+      spaceBetween: 30,
       slidesPerView: 2,
     },
   }
