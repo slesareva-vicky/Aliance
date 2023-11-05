@@ -115,3 +115,19 @@ mMenuToggle.addEventListener("click", (event) => {
   event.preventDefault();
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 })
+
+const modal = document.querySelector(".modal");
+const modalToggle = document.querySelectorAll("[data-toggle=modal]");
+const modalClose = document.querySelector(".modal-close")
+console.dir(modalToggle);
+modalToggle.forEach(element=> {
+  element.addEventListener("click", 
+  event=> {
+    event.preventDefault();
+    modal.classList.add("is-open")
+  });
+});
+modalClose.addEventListener("click", (event)=> {
+ event.preventDefault();
+ modal.classList.remove("is-open");
+});
