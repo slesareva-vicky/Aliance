@@ -14,20 +14,16 @@ const swiper = new Swiper('.header-features-slider', {
   slidesPerView: 'auto',
 
   breakpoints: {
-    // when window width is >= 576px
-    576: {
-      slidesPerView: 2,
-    },
     // when window width is >= 768px
-    768: {
+    940: {
       slidesPerView: 3,
     },
     // when window width is >= 1024px
-    1024: {
+    1200: {
       slidesPerView: 4,
     },
     // when window width is >= 1200px
-    1200: {
+    1460: {
       slidesPerView: 5,
     },
   }
@@ -39,15 +35,16 @@ const swiperSteps = new Swiper(".steps-slider", {
     nextEl: '.steps-button-next',
     prevEl: '.steps-button-prev',
   },
+  spaceBetween: 30,
   slidesPerView: 'auto',
   breakpoints: {
     576: {
       slidesPerView: 2,
     },
-    768: {
+    1170: {
       slidesPerView: 3,
     },
-    1024: {
+    1460: {
       slidesPerView: 4,
     },
   }
@@ -61,16 +58,12 @@ const swiperBlog = new Swiper(".blog-slider", {
   },
   slidesPerView: 1,
   breakpoints: {
-    760: {
-      spaceBetween: 3,
-      slidesPerView: 1.1,
-    },
     800: {
-      spaceBetween: 5,
+      spaceBetween: 10,
       slidesPerView: 1.25,
     },
     880: {
-      spaceBetween: 10,
+      spaceBetween: 150,
       slidesPerView: 1.5,
     },
     992: {
