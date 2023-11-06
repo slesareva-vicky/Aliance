@@ -1,10 +1,11 @@
 const navbar = document.querySelector(".navbar");
 const logoLight = document.querySelector(".logo-light");
-const logo = document.querySelector(".logo");
+const logoDark = document.querySelector(".logo-dark");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
 const modal = document.querySelector(".modal");
 const modalDialog = document.querySelector(".modal-dialog");
+const isFront = document.body.classList.contains("front-page");
 
 const swiper = new Swiper('.header-features-slider', {
   speed: 400,
@@ -81,18 +82,23 @@ const swiperBlog = new Swiper(".blog-slider", {
 
 const lightModeOn = () => {  // включаем светлый вариант меню
   navbar.classList.add("navbar-light");
-  logo.style.display = "block";
-  logoLight.style.display = "none";
 }
 
 const lightModeOff = () => {  // выключаем светлый вариант меню
   navbar.classList.remove("navbar-light");
-  logo.style.display = "";
-  logoLight.style.display = "";
 }
 
-const switchMode = () => {  // переключатель вариантов меню    
-  window.scrollY > 1 ? lightModeOn() : lightModeOff();
+const changeNavbarHeight = scroll => {
+  scroll ?
+    navbar.classList.add("navbar-scroll") :
+    navbar.classList.remove("navbar-scroll");
+}
+const switchMode = () => {  // переключатель вариантов меню 
+  const isScroll = window.scrollY > 1;
+  if (isFront) {
+    isScroll ? lightModeOn() : lightModeOff();
+    changeNavbarHeight(isScroll);
+  }
 }
 
 const openMenu = () => {  // открытие меню
