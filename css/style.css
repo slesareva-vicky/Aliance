@@ -718,7 +718,8 @@ section.cta {
   display: flex;
   gap: 30px;
 }
-.input-group-vertical{
+
+.input-group-vertical {
   display: flex;
   flex-direction: column;
 }
@@ -795,7 +796,7 @@ input::placeholder {
 
 .notify-icon {
   flex-shrink: 0;
-  margin-top: 5.6px;
+  margin-top: 1.6px;
 }
 
 .notify-text {
@@ -964,67 +965,79 @@ input::placeholder {
 }
 
 .modal {
- opacity: 0;
- visibility: hidden;
- transform: translateX(-100%);
- position: fixed;
- top: 0;
- left: 0;
- height: 100%;
- width: 100%;
- background-color: rgba(41, 45, 51, 0.50);
- z-index: 10;
- display: flex;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(41, 45, 51, 0.50);
+  z-index: 10;
+  transform: translateX(-100%);
 }
+
 .modal.is-open {
-  transform: translateX(0);
   visibility: visible;
-  opacity: 100%;
-}
-.modal.is-open .modal-dialog {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateX(0);
 }
+
+.modal.is-open .modal-dialog {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
 .modal-dialog {
-  background-color: #fff;
-  margin: auto;
+  position: absolute;
+  padding: 39px 50px 41px 50px;
   max-width: 460px;
-  padding: 40px 50px;
-  position: relative;
-  transform: translateY(-10%);
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  background-color: #fff;
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
 }
+
+.modal-title {
+  margin-bottom: 22px;
+  font-size: 48px;
+}
+
 .modal-close {
-  display: block;
+  display: flex;
   position: absolute;
   top: 40px;
   right: 50px;
   width: 50px;
   height: 50px;
-  display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #EBEBF0;
 }
-.modal-title {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
+
 .modal-text {
-  color: #828a99;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+  color: #828A99;
 }
+
 .modal-input-group {
   background-color: #fff;
 }
+
 .modal-form-footer {
   margin-top: 30px;
 }
+
 .modal-form-button {
   width: 100%;
-  margin-bottom: 24px;
+  height: 67px;
+  margin-bottom: 22px;
 }
+
 
 /* hover effects */
 @media (hover:hover) {
@@ -1078,6 +1091,131 @@ input::placeholder {
   }
 }
 
+@media (max-width: 1650px) {
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 52px 0 31px;
+  }
+
+  .footer-top .footer-phone,
+  .footer-top .fi-address,
+  .footer-top .fi-email,
+  .footer-top .footer-social {
+    margin-left: 0;
+    width: auto;
+  }
+
+  .footer-logo {
+    width: 160px;
+    height: 50.286px;
+    margin-top: 7px;
+  }
+
+  .footer-phone {
+    margin-top: 35px;
+    font-size: 28px;
+    line-height: 116%;
+  }
+
+  .fi-address {
+    margin-top: 28px;
+    gap: 12px;
+  }
+
+  .fi-email {
+    margin-top: 11px;
+    gap: 12px;
+  }
+
+  .footer-social {
+    margin-top: 23px;
+    gap: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 28px;
+    padding: 29px 0 14px;
+  }
+
+  .footer-menu-wrapper-contract {
+    width: 100%;
+  }
+
+  .footer-menu-wrapper-brand,
+  .footer-menu-wrapper-company {
+    margin-left: 0;
+  }
+
+  .footer-menu-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #292D33;
+  }
+
+  .footer-menu-list {
+    max-height: unset;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .footer-menu-wrapper-company .footer-menu-list {
+    max-height: unset;
+    padding-left: 0;
+  }
+
+  .footer-menu-link {
+    margin-bottom: 0;
+  }
+
+  .footer-menu-link-bold {
+    margin-bottom: 19px;
+  }
+
+  .footer-wrapper,
+  .footer-legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .footer-wrapper {
+    padding: 20px 0 16px;
+  }
+
+  .made-in {
+    display: none;
+  }
+
+  .made-in-mobile {
+    display: inline;
+  }
+
+
+  /* поломали подвал */
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .footer {
+    display: flex;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
 
 @media (max-width: 1460px) {
   .not1460 {
@@ -1460,6 +1598,23 @@ input::placeholder {
   }
 }
 
+@media (max-width: 810px) {
+
+  /* пересобрали для мобильной версии */
+
+  .footer-bottom {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: normal;
+    gap: 28px;
+  }
+
+
+  .footer {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .not768 {
     display: none;
@@ -1565,6 +1720,7 @@ input::placeholder {
   }
 }
 
+
 @media (max-width: 576px) {
   .not576 {
     display: none;
@@ -1668,7 +1824,6 @@ input::placeholder {
     gap: 15px;
   }
 
-
   .input-group-label {
     font-size: 14px;
   }
@@ -1683,148 +1838,35 @@ input::placeholder {
     flex-shrink: 1;
     width: 100%;
   }
-}
 
-@media (max-width: 1650px) {
-
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 52px 0 31px;
+  .modal-dialog {
+    padding: 30px 30px 32px 30px;
+    max-width: 345px;
   }
 
-  .footer-top .footer-phone,
-  .footer-top .fi-address,
-  .footer-top .fi-email,
-  .footer-top .footer-social {
-    margin-left: 0;
-    width: auto;
+  .modal-title {
+    margin-bottom: 11px;
+    font-size: 40px;
   }
 
-  .footer-logo {
-    width: 160px;
-    height: 50.286px;
-    margin-top: 7px;
+  .modal-close {
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
   }
 
-  .footer-phone {
-    margin-top: 35px;
-    font-size: 28px;
-    line-height: 116%;
-  }
-
-  .fi-address {
-    margin-top: 28px;
-    gap: 12px;
-  }
-
-  .fi-email {
-    margin-top: 11px;
-    gap: 12px;
-  }
-
-  .footer-social {
-    margin-top: 23px;
-    gap: 18px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 28px;
-    padding: 29px 0 14px;
-  }
-
-  .footer-menu-wrapper-contract {
-    width: 100%;
-  }
-
-  .footer-menu-wrapper-brand,
-  .footer-menu-wrapper-company {
-    margin-left: 0;
-  }
-
-  .footer-menu-title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #292D33;
-  }
-
-  .footer-menu-list {
-    max-height: unset;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-
-  .footer-menu-wrapper-company .footer-menu-list {
-    max-height: unset;
-    padding-left: 0;
-  }
-
-  .footer-menu-link {
-    margin-bottom: 0;
-  }
-
-  .footer-menu-link-bold {
+  .modal-text {
     margin-bottom: 19px;
   }
 
-  .footer-wrapper,
-  .footer-legal {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+  .modal-form-footer {
+    margin-top: 16px;
   }
 
-  .footer-wrapper {
-    padding: 20px 0 16px;
-  }
-
-  .made-in {
-    display: none;
-  }
-
-  .made-in-mobile {
-    display: inline;
-  }
-
-
-  /* поломали подвал */
-  .footer-bottom {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
-  }
-
-  .footer {
-    display: flex;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    align-items: flex-start;
-    justify-content: space-evenly;
-  }
-
-}
-
-@media (max-width: 810px) {
-
-  /* пересобрали для мобильной версии */
-
-  .footer-bottom {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: normal;
-    gap: 28px;
-  }
-
-
-  .footer {
-    display: block;
+  .modal-form-button {
+    width: 100%;
+    height: 62px;
+    margin-bottom: 20px;
   }
 }
