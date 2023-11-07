@@ -20,8 +20,8 @@
 
   <body class="front-page">
     <!-- 
-    <body>
-    <body style="position: relative">
+    <body class="front-page">
+    <body class="front-page" style="position: relative">
     <div style="opacity: 0.7; opacity: 0.5; position: absolute; z-index: 15">
       <img src="375/main_375.png" alt="" />      
     </div>    
@@ -32,7 +32,7 @@
     <div class="mobile-menu">
       <ul class="mobile-menu-nav">
         <li class="mobile-menu-nav-item">
-          <a href="/about.html" class="mobile-menu-link">О компании</a>
+          <a href="./about.php" class="mobile-menu-link">О компании</a>
         </li>
         <li class="mobile-menu-nav-item">
           <a href="#" class="mobile-menu-link">Контрактное производство</a>
@@ -79,7 +79,7 @@
           <a href="#" class="mobile-menu-link">Контакты</a>
         </li>
       </ul>
-      <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
+      <a href="tel:+79596861014" class="mobile-phone">+7 (959) 686-10-14</a>
       <div class="mobile-info">
         <svg class="icon24blue">
           <use href="img/sprite.svg#mark"></use>
@@ -127,9 +127,9 @@
           <use href="img/sprite.svg#logo-dark"></use>
         </svg>
       </a>
-      <ul class="header-nav not992">
+      <ul class="header-nav">
         <li class="header-nav-item">
-          <a href="/about.html" class="header-nav-link">О компании</a>
+          <a href="./about.php" class="header-nav-link">О компании</a>
         </li>
         <li class="header-nav-item">
           <a href="#" class="header-nav-link">Контрактное производство</a>
@@ -144,7 +144,7 @@
           <a href="#" class="header-nav-link">Контакты</a>
         </li>
       </ul>
-      <div class="header-phone not1700">
+      <div class="header-phone">
         <svg class="icon24blue">
           <use href="img/sprite.svg#phone"></use>
         </svg>
@@ -598,7 +598,7 @@
                 class="clients-logo"
               />
             </a>
-            <a href="#" class="clients-logo-item not576">
+            <a href="#" class="clients-logo-item not-paired">
               <img
                 src="img/client.png"
                 alt="logo clients"
@@ -630,7 +630,7 @@
               <h3 class="blog-card-title">
                 Современная методология разработки одухотворила всех причастных
               </h3>
-              <p class="blog-card-text not576">
+              <p class="blog-card-text">
                 Действия представителей оппозиции, превозмогая сложившуюся
                 непростую экономическую ситуацию, в равной степени
                 предоставлены...
@@ -645,7 +645,7 @@
               <h3 class="blog-card-title">
                 Сложно сказать, почему жизнь прекрасна
               </h3>
-              <p class="blog-card-text not992">
+              <p class="blog-card-text">
                 Действия представителей оппозиции, превозмогая сложившуюся
                 непростую экономическую ситуацию, в равной степени
                 предоставлены...
@@ -658,7 +658,7 @@
                 class="blog-card-image"
               />
               <h3 class="blog-card-title">Нечто о чем-то</h3>
-              <p class="blog-card-text not992">
+              <p class="blog-card-text">
                 Действия представителей оппозиции, превозмогая сложившуюся
                 непростую экономическую ситуацию, в равной степени
                 предоставлены...
@@ -687,261 +687,4 @@
     </section>
     <!-- /.section blog -->
 
-    <section class="cta">
-      <div class="bg-grey">
-        <div class="container-vs cta-image-wrapper">
-          <img
-            src="img/cta.png"
-            alt="call to action"
-            class="cta-image not992"
-          />
-
-          <div class="container cta-form-wrapper">
-            <form action="#" class="cta-form">
-              <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
-              <p class="cta-form-text">
-                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
-                ответит на все интересующие вопросы и поможем даже в самых
-                сложных случаях!
-              </p>
-              <div class="input-group-wrapper">
-                <div class="input-group">
-                  <input
-                    id="user-name"
-                    type="text"
-                    class="input"
-                    placeholder=" "
-                  />
-                  <label class="input-group-label" for="user-name">Имя</label>
-                </div>
-                <div class="input-group">
-                  <input
-                    id="user-phone"
-                    type="tel"
-                    class="input"
-                    placeholder=" "
-                  />
-                  <label class="input-group-label" for="user-phone"
-                    >Номер телефона
-                  </label>
-                </div>
-              </div>
-              <!-- /.input-group-wrapper -->
-              <div class="cta-form-footer">
-                <button type="submit" class="button cta-form-button">
-                  Отправить заявку
-                </button>
-                <div class="notify">
-                  <svg class="notify-icon icon14">
-                    <use href="img/sprite.svg#shield"></use>
-                  </svg>
-                  <p class="notify-text">
-                    Обращаясь к нам вы получаете не только профессиональную
-                    работу, но и абсолютную конфиденциальность информации!
-                  </p>
-                </div>
-              </div>
-              <!-- /.cta-form-footer -->
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.cta -->
-    <footer class="footer">
-      <div class="footer-block">
-        <div class="container">
-          <div class="footer-top">
-            <svg class="footer-logo">
-              <use href="img/sprite.svg#logo-dark"></use>
-            </svg>
-            <a href="tel:+74996861014" class="footer-phone"
-              >+7 (499) 686-10-14</a
-            >
-            <div class="footer-info fi-address">
-              <svg class="icon24blue">
-                <use href="img/sprite.svg#mark"></use>
-              </svg>
-              <address class="footer-info-address">
-                г. Москва, Холодильный пер. 4к1с8
-              </address>
-            </div>
-            <!-- /.footer-info -->
-            <div class="footer-info fi-email">
-              <svg class="icon24blue">
-                <use href="img/sprite.svg#mail"></use>
-              </svg>
-              <a
-                href="mailto:a.dragunov@tdaliance.ru"
-                class="footer-info-email"
-              >
-                a.dragunov@tdaliance.ru
-              </a>
-            </div>
-            <!-- /.footer-info -->
-            <div class="footer-social">
-              <a href="#" class="footer-social-link">
-                <svg class="footer-social-icon icon24blue">
-                  <use href="img/sprite.svg#vk"></use>
-                </svg>
-              </a>
-              <a href="#" class="footer-social-link">
-                <svg class="footer-social-icon icon24blue">
-                  <use href="img/sprite.svg#inst"></use>
-                </svg>
-              </a>
-            </div>
-            <!-- /.mobile-info -->
-          </div>
-          <!-- /.footer-top -->
-        </div>
-      </div>
-      <div class="footer-block">
-        <div class="container">
-          <div class="footer-bottom">
-            <div class="footer-menu-wrapper-contract">
-              <div class="footer-menu-title">Контрактное производство</div>
-              <ul class="footer-menu-list">
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Автомобильная химия</a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Бытовая химия</a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">
-                    Дезинфицирующие средства
-                  </a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Пищевые аэрозоли</a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link"
-                    >Косметическая продукция</a
-                  >
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Краски аэрозольные</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.footer-menu-wrapper -->
-            <div class="footer-menu-wrapper-brand">
-              <div class="footer-menu-title">Собственные марки</div>
-              <ul class="footer-menu-list">
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Автохимия AG-Tech</a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link">Автохимия AP</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.footer-menu-wrapper -->
-            <div class="footer-menu-wrapper-company">
-              <ul class="footer-menu-list">
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link footer-menu-link-bold">
-                    О&nbsp;компании
-                  </a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link footer-menu-link-bold">
-                    Новости
-                  </a>
-                </li>
-                <li class="footer-menu-item">
-                  <a href="#" class="footer-menu-link footer-menu-link-bold">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.footer-menu-wrapper -->
-          </div>
-          <!-- /.footer-bottom -->
-        </div>
-      </div>
-      <div class="container">
-        <div class="footer-wrapper">
-          <div class="footer-legal">
-            <p class="footer-copyright">
-              &copy; 2022 «Aliance Production». Все права защищены.
-            </p>
-            <a href="#" class="footer-policy">Политики конфиденциальности</a>
-          </div>
-          <div class="footer-author">
-            <span class="made-in">Сделано в</span>
-            <span class="made-in-mobile">Дизайн и разработка:</span>&nbsp;
-            <svg width="52" height="11">
-              <use href="img/sprite.svg#ruso"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- /.footer -->
-
-    <div class="modal">
-      <div class="modal-dialog">
-        <h2 class="modal-title">Есть вопросы?</h2>
-        <a href="#" class="modal-close" data-toggle="modal">
-          <svg class="close-icon icon24">
-            <use href="img/sprite.svg#close"></use>
-          </svg>
-        </a>
-        <p class="modal-text">
-          Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
-          ответит на все интересующие вопросы и поможем даже в самых сложных
-          случаях!
-        </p>
-        <form action="#" class="modal-form">
-          <div class="input-group-wrapper input-group-vertical">
-            <div class="input-group modal-input-group">
-              <input
-                id="modal-user-name"
-                type="text"
-                class="input modal-input"
-                placeholder=" "
-              />
-              <label
-                class="input-group-label modal-input-label"
-                for="modal-user-name"
-                >Имя</label
-              >
-            </div>
-            <div class="input-group modal-input-group">
-              <input
-                id="modal-user-phone"
-                type="tel"
-                class="input modal-input"
-                placeholder=" "
-              />
-              <label
-                class="input-group-label modal-input-label"
-                for="modal-user-phone"
-                >Номер телефона
-              </label>
-            </div>
-          </div>
-          <!-- /.input-group-wrapper -->
-          <div class="modal-form-footer">
-            <button type="submit" class="button modal-form-button">
-              Отправить заявку
-            </button>
-            <div class="notify">
-              <svg class="notify-icon icon14">
-                <use href="img/sprite.svg#shield"></use>
-              </svg>
-              <p class="notify-text">
-                Обращаясь к нам вы получаете не только профессиональную работу,
-                но и абсолютную конфиденциальность информации!
-              </p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
+    <?php include_once('footer.php'); ?>

@@ -26,7 +26,7 @@ const swiper = new Swiper('.header-features-slider', {
       slidesPerView: 4,
     },
     // when window width is >= 1200px
-    1460: {
+    1461: {
       slidesPerView: 5,
     },
   }
@@ -38,16 +38,15 @@ const swiperSteps = new Swiper(".steps-slider", {
     nextEl: '.steps-button-next',
     prevEl: '.steps-button-prev',
   },
-  spaceBetween: 30,
   slidesPerView: 'auto',
   breakpoints: {
-    576: {
+    720: {
       slidesPerView: 2,
     },
-    1170: {
+    860: {
       slidesPerView: 3,
     },
-    1460: {
+    1461: {
       slidesPerView: 4,
     },
   }
@@ -59,25 +58,8 @@ const swiperBlog = new Swiper(".blog-slider", {
     nextEl: '.blog-button-next',
     prevEl: '.blog-button-prev',
   },
-  slidesPerView: 1,
-  breakpoints: {
-    800: {
-      spaceBetween: 10,
-      slidesPerView: 1.25,
-    },
-    880: {
-      spaceBetween: 150,
-      slidesPerView: 1.5,
-    },
-    992: {
-      spaceBetween: 20,
-      slidesPerView: 1.75,
-    },
-    1200: {
-      spaceBetween: 30,
-      slidesPerView: 2,
-    },
-  }
+  slidesPerView: 'auto',
+  spaceBetween: 30,
 });
 
 const lightModeOn = () => {  // включаем светлый вариант меню
