@@ -62,7 +62,7 @@ const swiperBlog = new Swiper(".blog-slider", {
   spaceBetween: 30,
 });
 
-const lightModeOn = () => {  // включаем светлый вариант меню
+const lightModeOn = () => {  // включаем светлый вариант меню  
   navbar.classList.add("navbar-light");
 }
 
@@ -70,13 +70,13 @@ const lightModeOff = () => {  // выключаем светлый вариан�
   navbar.classList.remove("navbar-light");
 }
 
-const changeNavbarHeight = scroll => {
+const changeNavbarHeight = scroll => {  
   scroll ?
     navbar.classList.add("navbar-scroll") :
     navbar.classList.remove("navbar-scroll");
 }
 const switchMode = () => {  // переключатель вариантов меню 
-  const isScroll = window.scrollY > 1;
+  const isScroll = window.scrollY > 1;  
   if (isFront) {
     isScroll ? lightModeOn() : lightModeOff();
     changeNavbarHeight(isScroll);
