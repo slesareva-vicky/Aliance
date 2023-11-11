@@ -20,6 +20,8 @@
                     type="text"
                     class="input"
                     placeholder=" "
+                    maxlength="100"
+                    required
                   />
                   <label class="input-group-label" for="user-name">Имя</label>
                 </div>
@@ -30,6 +32,8 @@
                     type="tel"
                     class="input"
                     placeholder=" "
+                    maxlength="30"
+                    required
                   />
                   <label class="input-group-label" for="user-phone"
                     >Номер телефона
@@ -65,8 +69,8 @@
             <svg class="footer-logo">
               <use href="/img/sprite.svg#logo-dark"></use>
             </svg>
-            <a href="tel:+79592031014" class="footer-phone"
-              >+7 (959) 203-10-14</a
+            <a href="tel:+79597771014" class="footer-phone"
+              >+7 (959) 777-10-14</a
             >
             <div class="footer-info fi-address">
               <svg class="icon24blue">
@@ -177,7 +181,7 @@
         <div class="footer-wrapper">
           <div class="footer-legal">
             <p class="footer-copyright">
-              &copy; <?php echo date('d.m.y');?> «Aliance Production». Все права защищены.
+              &copy; <?php echo date('d.m.Y'); ?> «Aliance Production». Все права защищены.
             </p>
             <a href="/politics" class="footer-policy">Политики конфиденциальности</a>
           </div>
@@ -206,27 +210,34 @@
           ответит на все интересующие вопросы и поможем даже в самых сложных
           случаях!
         </p>
-        <form action="/404" class="modal-form">
+        <form action="/handler.php" method="POST" class="modal-form">
           <div class="input-group-wrapper input-group-vertical">
             <div class="input-group modal-input-group">
               <input
                 id="modal-user-name"
+                name="username"
                 type="text"
                 class="input modal-input"
                 placeholder=" "
+                maxlength="100"
+                required
               />
               <label
                 class="input-group-label modal-input-label"
                 for="modal-user-name"
-                >Имя</label
+                >Имя
+              </label
               >
             </div>
             <div class="input-group modal-input-group">
               <input
                 id="modal-user-phone"
+                name="userphone"
                 type="tel"
                 class="input modal-input"
                 placeholder=" "
+                maxlength="30"
+                required               
               />
               <label
                 class="input-group-label modal-input-label"
