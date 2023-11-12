@@ -89,6 +89,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" href="/img/aliance.ico" type="image/x-icon" />
     <script src="/js/swiper-bundle.min.js" defer></script>
+    <script src="/js/just-validate.production.min.js" defer></script>
+    <script src="/js/helper.js" defer></script>
     <script src="/js/main.js" defer></script>
     <title>О компании - Aliance Production</title>
   </head>
@@ -181,7 +183,7 @@
         </a>
       </div>
       <!-- /.header-phone -->
-      <button class="navbar-button button" data-toggle="modal">
+      <button class="navbar-button button" data-modal="modal-form">
         <svg width="24" height="24" class="button-icon">
           <use href="/img/sprite.svg#phone"></use>
         </svg>

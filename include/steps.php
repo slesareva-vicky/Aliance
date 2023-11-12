@@ -11,11 +11,11 @@
             Безусловно, сплочённость команды профессионалов позволяет
             оценить значение форм воздействия.
           </p>
-          <a href="/404" class="button-link" data-toggle="modal">Оставить заявку</a>
+          <div class="button-link" data-modal="modal-form">Оставить заявку</div>
         </li>
         <li class="swiper-slide steps-item">
           <span class="steps-num">02</span>
-          <h3 class="steps-title dark">Заключение договора</h3>
+          <h3 class="steps-title dark">Заключение договора</h3>modal-dialog
           <p class="steps-text">
             Лишь интерактивные прототипы призваны к ответу.
           </p>

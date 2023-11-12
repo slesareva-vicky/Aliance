@@ -197,10 +197,10 @@
     </footer>
     <!-- /.footer -->
 
-    <div class="modal">
+    <div id="modal-form" class="modal">
       <div class="modal-dialog">
         <h2 class="modal-title">Есть вопросы?</h2>
-        <a href="/404" class="modal-close" data-toggle="modal">
+        <a href="/404" class="modal-close" data-modal="modal-form">
           <svg class="close-icon icon24">
             <use href="/img/sprite.svg#close"></use>
           </svg>
@@ -262,6 +262,25 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+
+    <div id="modal-thanks" class="modal">
+      <div class="modal-dialog modal-dialog-thanks">
+        <a href="#" class="modal-close" data-modal="modal-thanks">
+          <svg class="close-icon icon24">
+            <use href="/img/sprite.svg#close"></use>
+          </svg>
+        </a>
+        <img src="/img/thanks_illu.png" alt="Спасибо за заявку" />
+        <h2 class="modal-title modal-title-thanks">Спасибо за заявку!</h2>
+        <p class="modal-text modal-text-thanks">
+          Наш менеджер свяжется с Вами в ближайшее время ответит на все
+          интересующие вопросы и поможем даже в самых сложных случаях!
+        </p>
+        <a href="/" class="button modal-form-button modal-form-button-thanks"
+          >Вернуться на главную
+        </a>
       </div>
     </div>
   </body>

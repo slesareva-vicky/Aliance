@@ -3,16 +3,20 @@ const logoLight = document.querySelector(".logo-light");
 const logoDark = document.querySelector(".logo-dark");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
-const modal = document.querySelector(".modal");
-const modalDialog = document.querySelector(".modal-dialog");
+const body = document.querySelector("body");
+const listModal = {
+  list: [],
+  open: modal=>{listModal.list.push(modal); modal.classList.add("is-open"); return modal;},
+  close: ()=>{let modal=listModal.list.pop(); modal.classList.remove("is-open"); return modal;}
+};
 const isFront = document.body.classList.contains("front-page");
 
-const swiper = new Swiper('.header-features-slider', {
+const swiper = new Swiper('.features-slider', {
   speed: 400,
   autoHeight: true,
   navigation: {
-    nextEl: '.header-features-button-next',
-    prevEl: '.header-features-button-prev',
+    nextEl: '.features-button-next',
+    prevEl: '.features-button-prev',
   },
   slidesPerView: 'auto',
 
@@ -62,6 +66,22 @@ const swiperBlog = new Swiper(".blog-slider", {
   spaceBetween: 30,
 });
 
+const swiperCentr = new Swiper(".centr-slider", {
+  speed: 400,
+  navigation: {
+    nextEl: '.centr-button-next',
+    prevEl: '.centr-button-prev',
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  centeredSlides: true,
+  breakpoints: {
+    720: {
+      spaceBetween: 12,
+    },
+  }
+});
+
 const lightModeOn = () => {  // включаем светлый вариант меню  
   navbar.classList.add("navbar-light");
 }
@@ -70,13 +90,13 @@ const lightModeOff = () => {  // выключаем светлый вариан�
   navbar.classList.remove("navbar-light");
 }
 
-const changeNavbarHeight = scroll => {  
+const changeNavbarHeight = scroll => {
   scroll ?
     navbar.classList.add("navbar-scroll") :
     navbar.classList.remove("navbar-scroll");
 }
 const switchMode = () => {  // переключатель вариантов меню 
-  const isScroll = window.scrollY > 1;  
+  const isScroll = window.scrollY > 1;
   if (isFront) {
     isScroll ? lightModeOn() : lightModeOff();
     changeNavbarHeight(isScroll);
@@ -106,23 +126,80 @@ mMenuToggle.addEventListener("click", (event) => {
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 })
 
+body.addEventListener("click", e => {
+  let button = e.target.closest('[data-modal]');
+  let modal = button ? document.getElementById(button.dataset.modal) : e.target.closest('.modal');
+  let modalDialog = modal ? modal.querySelector(".modal-dialog") : null;  
 
-document.addEventListener("click", event => {
-  if (event.target.dataset.toggle == "modal" ||
-    event.target.parentNode.dataset.toggle == "modal" ||
-    (!event.composedPath().includes(modalDialog) &&
-      modal.classList.contains("is-open"))
-  ) {
-    event.preventDefault();
-    modal.classList.toggle("is-open");
+  if ( button ||   
+    (modal && !e.composedPath().includes(modalDialog) &&
+      modal.classList.contains("is-open"))) {
+    e.preventDefault();    
+    modal.classList.contains("is-open") ? listModal.close() : listModal.open(modal);
   }
 });
 
 document.addEventListener("keyup", event => {
-  if (event.key == "Escape" && modal.classList.contains("is-open")) {
-    event.preventDefault();
-    modal.classList.remove("is-open");
+  if (event.key == "Escape" && listModal.list.length ) {
+    event.preventDefault();        
+    listModal.close();
   }
 });
 
+document.querySelectorAll('input[name="userphone"]').forEach(input => {
+  input.maskPhone = new Picture('+7 (ddd) ddd-dd-dd');
+});
 
+body.addEventListener('input', (e) => {
+  // ввод телефона 
+  if (e.target.closest('input[name="userphone"]')) {
+    e.target.maskPhone.edit(e.target, e.inputType);
+  }
+});
+
+const forms =  document.querySelectorAll('form'); // Собираем все формы 
+forms.forEach((form) => {
+  const validation = new JustValidate(form, {
+    errorFieldCssClass: 'is-invalid',
+  });
+  validation
+  .addField("[name=username]", [
+    {
+      rule: 'required',
+      errorMessage: "Укажите имя",
+    },
+    {
+      rule: 'maxLength',
+      value: 50,
+      errorMessage: "Максимально 50 символов",
+    },
+  ])
+  .addField("[name=userphone]", [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите телефон',
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target; // Наша форма 
+    const formData = new FormData(thisForm); //Данные из нашей формы
+    const ajaxSend = (formData)  => {
+      fetch(thisForm.getAttribute("action"), { 
+        method: thisForm.getAttribute("method"), 
+        body: formData,
+      }).then((response) => {        
+        if (response.ok) {
+          thisForm.reset();          
+          listModal.close();          
+          listModal.open(document.getElementById("modal-thanks"));                
+        } else {
+          alert("Ошибка. Текст ошибки: "+response.statusText);
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      });      
+    };
+    ajaxSend(formData); 
+  });
+});
