@@ -4,7 +4,7 @@ include_once ('include/nav.php');
 
 IF ( $_SESSION['currentpages'] == '/index' ){	
  
-  include_once ('include/index0.php');
+  include_once ('pages/index.php');
   
 }ELSE {  
   

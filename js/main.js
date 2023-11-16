@@ -6,8 +6,12 @@ const menu = document.querySelector(".mobile-menu");
 const body = document.querySelector("body");
 const listModal = {
   list: [],
-  open: modal=>{listModal.list.push(modal); modal.classList.add("is-open"); return modal;},
-  close: ()=>{let modal=listModal.list.pop(); modal.classList.remove("is-open"); return modal;}
+  open: modal => { listModal.list.push(modal); modal.classList.add("is-open"); return modal; },
+  close: () => { 
+    let modal = (listModal.list.length > 0 )? listModal.list.pop() : null; 
+    if(modal) {modal.classList.remove("is-open");} 
+    return modal; 
+  }
 };
 const isFront = document.body.classList.contains("front-page");
 
@@ -67,20 +71,34 @@ const swiperBlog = new Swiper(".blog-slider", {
 });
 
 const swiperCentr = new Swiper(".centr-slider", {
-  speed: 400,
+  speed: 600,
   navigation: {
     nextEl: '.centr-button-next',
     prevEl: '.centr-button-prev',
   },
   slidesPerView: 'auto',
-  spaceBetween: 30,
+  spaceBetween: 12,
   centeredSlides: true,
   breakpoints: {
-    720: {
-      spaceBetween: 12,
+    576: {
+      centeredSlides: false,
+      spaceBetween: 30,
     },
   }
 });
+
+const swiperBlogs = new Swiper(".blogs-slider", {
+  speed: 400,
+  slidesPerView: 1,
+  pagination: {
+    el: ".blogs-slider-pagination",
+    clickable: true,
+    renderBullet: (index, className) => {
+      return '<span class="' + className + ' blogs-slider-bullet">' + (index + 1) + "</span>";
+    },
+  },
+});
+
 
 const lightModeOn = () => {  // включаем светлый вариант меню  
   navbar.classList.add("navbar-light");
@@ -129,19 +147,20 @@ mMenuToggle.addEventListener("click", (event) => {
 body.addEventListener("click", e => {
   let button = e.target.closest('[data-modal]');
   let modal = button ? document.getElementById(button.dataset.modal) : e.target.closest('.modal');
-  let modalDialog = modal ? modal.querySelector(".modal-dialog") : null;  
-
-  if ( button ||   
+  let modalDialog = modal ? modal.querySelector(".modal-dialog") : null;
+  
+  if (button ||
     (modal && !e.composedPath().includes(modalDialog) &&
       modal.classList.contains("is-open"))) {
-    e.preventDefault();    
+    e.preventDefault();
+    
     modal.classList.contains("is-open") ? listModal.close() : listModal.open(modal);
   }
 });
 
 document.addEventListener("keyup", event => {
-  if (event.key == "Escape" && listModal.list.length ) {
-    event.preventDefault();        
+  if (event.key == "Escape" && listModal.list.length) {
+    event.preventDefault();
     listModal.close();
   }
 });
@@ -157,49 +176,49 @@ body.addEventListener('input', (e) => {
   }
 });
 
-const forms =  document.querySelectorAll('form'); // Собираем все формы 
+const forms = document.querySelectorAll('form'); // Собираем все формы 
 forms.forEach((form) => {
   const validation = new JustValidate(form, {
     errorFieldCssClass: 'is-invalid',
   });
   validation
-  .addField("[name=username]", [
-    {
-      rule: 'required',
-      errorMessage: "Укажите имя",
-    },
-    {
-      rule: 'maxLength',
-      value: 50,
-      errorMessage: "Максимально 50 символов",
-    },
-  ])
-  .addField("[name=userphone]", [
-    {
-      rule: 'required',
-      errorMessage: 'Укажите телефон',
-    },
-  ])
-  .onSuccess((event) => {
-    const thisForm = event.target; // Наша форма 
-    const formData = new FormData(thisForm); //Данные из нашей формы
-    const ajaxSend = (formData)  => {
-      fetch(thisForm.getAttribute("action"), { 
-        method: thisForm.getAttribute("method"), 
-        body: formData,
-      }).then((response) => {        
-        if (response.ok) {
-          thisForm.reset();          
-          listModal.close();          
-          listModal.open(document.getElementById("modal-thanks"));                
-        } else {
-          alert("Ошибка. Текст ошибки: "+response.statusText);
-        }
-      })
-      .catch(error=>{
-        console.log(error);
-      });      
-    };
-    ajaxSend(formData); 
-  });
+    .addField("[name=username]", [
+      {
+        rule: 'required',
+        errorMessage: "Укажите имя",
+      },
+      {
+        rule: 'maxLength',
+        value: 50,
+        errorMessage: "Максимально 50 символов",
+      },
+    ])
+    .addField("[name=userphone]", [
+      {
+        rule: 'required',
+        errorMessage: 'Укажите телефон',
+      },
+    ])
+    .onSuccess((event) => {
+      const thisForm = event.target; // Наша форма 
+      const formData = new FormData(thisForm); //Данные из нашей формы
+      const ajaxSend = (formData) => {
+        fetch(thisForm.getAttribute("action"), {
+          method: thisForm.getAttribute("method"),
+          body: formData,
+        }).then((response) => {
+          if (response.ok) {
+            thisForm.reset();
+            listModal.close();
+            listModal.open(document.getElementById("modal-thanks"));
+          } else {
+            alert("Ошибка. Текст ошибки: " + response.statusText);
+          }
+        })
+          .catch(error => {
+            console.log(error);
+          });
+      };
+      ajaxSend(formData);
+    });
 });

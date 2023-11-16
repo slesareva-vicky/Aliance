@@ -1,5 +1,5 @@
 
-<section class="cta">
+    <section class="cta">
       <div class="bg-grey">
         <div class="container-vs cta-image-wrapper">
           <img src="/img/cta.png" alt="call to action" class="cta-image" />
@@ -69,43 +69,7 @@
             <svg class="footer-logo">
               <use href="/img/sprite.svg#logo-dark"></use>
             </svg>
-            <a href="tel:+79597771014" class="footer-phone"
-              >+7 (959) 777-10-14</a
-            >
-            <div class="footer-info fi-address">
-              <svg class="icon24blue">
-                <use href="/img/sprite.svg#mark"></use>
-              </svg>
-              <address class="footer-info-address">
-                г. Москва, Холодильный пер. 4к1с8
-              </address>
-            </div>
-            <!-- /.footer-info -->
-            <div class="footer-info fi-email">
-              <svg class="icon24blue">
-                <use href="/img/sprite.svg#mail"></use>
-              </svg>
-              <a
-                href="mailto:a.dragunov@tdaliance.ru"
-                class="footer-info-email"
-              >
-                a.dragunov@tdaliance.ru
-              </a>
-            </div>
-            <!-- /.footer-info -->
-            <div class="footer-social">
-              <a href="/404" class="footer-social-link">
-                <svg class="footer-social-icon icon24blue">
-                  <use href="/img/sprite.svg#vk"></use>
-                </svg>
-              </a>
-              <a href="/404" class="footer-social-link">
-                <svg class="footer-social-icon icon24blue">
-                  <use href="/img/sprite.svg#inst"></use>
-                </svg>
-              </a>
-            </div>
-            <!-- /.mobile-info -->
+            <?php include_once ('include/aliance-info.php'); ?>
           </div>
           <!-- /.footer-top -->
         </div>
