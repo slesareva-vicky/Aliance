@@ -1,6 +1,6 @@
 <?php  
   $page_head_mode['style'] = 'bg-grey';
-  $page_head_mode['leiba_src'] = "/img/in_page.png";
+  $page_head_mode['leiba_src'] = "/img/in_page";
   $page_head_mode['leiba_alt'] = "графитовая смазка";
 ?>
 <style>
@@ -28,24 +28,31 @@
   }
 </style>
 
-
 <?php  include_once ('include/page-head.php'); ?>
-
 
 <section class="ag-tech">
   <div class="container">
     <div class="ag-tech-wrapper">
       <div class="ag-tech-img">
-        <img
-          src="/img/ag-tech.png"
-          alt="Фото ag-tech производства"
-          class="ag-tech-img-desktop"
-        />
-        <img
-          src="/img/ag-tech-mb.jpg"
-          alt="Фото ag-tech производства"
-          class="ag-tech-img-mobile"
-        />
+        <picture>
+          <source type="image/webp" srcset="/img/ag-tech.webp" >
+          <source type="image/jpeg" srcset="/img/ag-tech.png" >
+          <img
+            src="/img/ag-tech.png"
+            alt="Фото ag-tech производства"
+            class="ag-tech-img-desktop"
+          />
+        </picture>    
+        
+        <picture>
+          <source type="image/webp" srcset="/img/ag-tech-mb.webp" >
+          <source type="image/jpeg" srcset="/img/ag-tech-mb.jpg" >
+          <img
+            src="/img/ag-tech-mb.jpg"
+            alt="Фото ag-tech производства"
+            class="ag-tech-img-mobile"
+          />          
+        </picture>        
       </div>
       <div class="ag-tech-content">
         <div class="separator"></div>
@@ -137,12 +144,20 @@
           Скачать каталог
         </button>
       </div>
-      <img src="/img/book.png" alt="Фото доктора" class="book-photo" />
-      <img
-        src="/img/book-mb.png"
-        alt="Фото доктора"
-        class="book-photo-mobile"
-      />
+      <picture>
+        <source type="image/webp" srcset="/img/book.webp" >
+        <source type="image/jpeg" srcset="/img/book.png" >
+        <img src="/img/book.png" alt="Фото доктора" class="book-photo" />
+      </picture>   
+      <picture>
+        <source type="image/webp" srcset="/img/book-mb.webp" >
+        <source type="image/jpeg" srcset="/img/book-mb.png" >
+        <img
+          src="/img/book-mb.png"
+          alt="Фото доктора"
+          class="book-photo-mobile"
+        />
+      </picture>
     </div>
     <!-- /.container-vs book-img -->
   </div>

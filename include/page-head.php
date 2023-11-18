@@ -30,10 +30,15 @@
         </div>
         <!-- /.header-content -->
         <div class="header-page-leiba">
-        <img 
-            src="<?php echo $page_head_mode['leiba_src'];?>"
-            alt="<?php echo $page_head_mode['leiba_alt'];?>"               
-          />
+          <?php 
+            if ( $page_head_mode['leiba_src'] !== '') {         
+              echo '<picture>';        
+              echo '<source type="image/webp" srcset="'.$page_head_mode['leiba_src'].'.webp'.'">';
+              echo '<source type="image/jpeg" srcset="'.$page_head_mode['leiba_src'].'.png">';
+              echo '<img src="'.$page_head_mode['leiba_src'].'.png'.'" alt="'.$page_head_mode['leiba_alt'].'">';
+              echo '</picture>';        
+            }
+          ?>
         </div>
         <!-- /.header-page-leiba -->
       </div>

@@ -3,11 +3,11 @@
   <div class="swiper blog-slider">
     <div class="swiper-wrapper blog-wrapper">
       <a href="/blog/more" class="swiper-slide blog-card">
-        <img
-          src="/img/blog/blog-photo2.jpg"
-          alt=""
-          class="blog-card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="/img/blog/blog-photo2.webp" >
+          <source type="image/jpeg" srcset="/img/blog/blog-photo2.jpg" >
+          <img src="/img/blog/blog-photo2.jpg" alt="Фото 2 блог" class="blog-card-image">
+        </picture>
         <h3 class="blog-card-title">
           Современная методология разработки одухотворила всех причастных
         </h3>
@@ -18,11 +18,11 @@
         </p>
       </a>
       <a href="/404" class="swiper-slide blog-card">
-        <img
-          src="/img/blog/blog-photo1.jpg"
-          alt=""
-          class="blog-card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="/img/blog/blog-photo1.webp" >
+          <source type="image/jpeg" srcset="/img/blog/blog-photo1.jpg">
+          <img src="/img/blog/blog-photo1.jpg" alt="Фото 1 блог" class="blog-card-image">
+        </picture>
         <h3 class="blog-card-title">
           Сложно сказать, почему жизнь прекрасна
         </h3>
@@ -33,11 +33,12 @@
         </p>
       </a>
       <a href="/404" class="swiper-slide blog-card">
-        <img
-          src="/img/blog/blog-photo1.jpg"
-          alt=""
-          class="blog-card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="/img/blog/blog-photo2.webp" >
+          <source type="image/jpeg" srcset="/img/blog/blog-photo2.jpg" >
+          <img src="/img/blog/blog-photo2.jpg" alt="Фото 2 блог" class="blog-card-image">
+        </picture>
+        
         <h3 class="blog-card-title">Нечто о чем-то</h3>
         <p class="blog-card-text">
           Действия представителей оппозиции, превозмогая сложившуюся

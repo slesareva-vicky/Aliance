@@ -3,6 +3,7 @@
   src: url('../fonts/BebasNeueBook.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* initialization style */
@@ -1003,7 +1004,10 @@ input::placeholder {
 }
 
 .footer-logo {
-  flex-shrink: 0;
+  flex-shrink: 0;  
+  
+}
+.footer-logo svg {  
   width: 200px;
   height: 62.857px;
 }
@@ -2079,10 +2083,13 @@ section.err404 {
     width: auto;
   }
 
-  .footer-logo {
+  .footer-logo {  
+    margin-top: 7px;
+  }
+
+  .footer-logo svg {
     width: 160px;
     height: 50.286px;
-    margin-top: 7px;
   }
 
   .aliance-phone {

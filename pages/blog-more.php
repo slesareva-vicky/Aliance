@@ -82,10 +82,18 @@
           участие в формировании форм развития.
         </p>
         <div class="bm-img-full">
-          <img src="/img/mission-vh.jpg" alt="Фото производства" />
+          <picture>
+            <source type="image/webp" srcset="/img/mission-vh.webp" >
+            <source type="image/jpeg" srcset="/img/mission-vh.jpg" >
+            <img src="/img/mission-vh.jpg" alt="Фото производства" />
+          </picture>           
         </div>
         <div class="bm-img-full-mobile">
-          <img src="/img/mission-vh-mb.jpg" alt="Фото производства" />
+          <picture>
+            <source type="image/webp" srcset="/img/mission-vh-mb.webp" >
+            <source type="image/jpeg" srcset="/img/mission-vh-mb.jpg" >
+            <img src="/img/mission-vh-mb.jpg" alt="Фото производства" />
+          </picture>
         </div>
         <p class="bm-h4">Равным образом консультация с широким активом:</p>
         <ul class="bm-ul">

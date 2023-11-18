@@ -1,6 +1,6 @@
 <?php  
   $page_head_mode['style'] = 'bg-grey';
-  $page_head_mode['leiba_src'] = "/img/in_page.png";
+  $page_head_mode['leiba_src'] = "/img/in_page";
   $page_head_mode['leiba_alt'] = "графитовая смазка";
 ?>
 
@@ -41,16 +41,25 @@
   <div class="container">
     <div class="mission-wrapper">
       <div class="mission-img">
-        <img
-          src="/img/mission.jpg"
-          alt="Фото производства"
-          class="mission-img-desktop"
-        />
-        <img
-          src="/img/mission-mb.jpg"
-          alt="Фото производства"
-          class="mission-img-mobile"
-        />
+        <picture>
+          <source type="image/webp" srcset="/img/mission.webp" >
+          <source type="image/jpeg" srcset="/img/mission.jpg" >      
+          <img
+            src="/img/mission.jpg"
+            alt="Фото производства"
+            class="mission-img-desktop"
+          />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/img/mission-mb.webp" >
+          <source type="image/jpeg" srcset="/img/mission-mb.jpg" >      
+          <img
+            src="/img/mission-mb.jpg"
+            alt="Фото производства"
+            class="mission-img-mobile"
+          />
+        </picture>  
+
       </div>
       <div class="mission-content">
         <div class="separator"></div>
@@ -164,12 +173,20 @@
         </ul>
       </div>
     </div>
-    <img src="/img/doctor.jpg" alt="Фото доктора" class="doctor-photo" />
-    <img
-      src="/img/doctor-mb.jpg"
-      alt="Фото доктора"
-      class="doctor-photo-mobile"
-    />
+    <picture>
+      <source type="image/webp" srcset="/img/doctor.webp" >
+      <source type="image/jpeg" srcset="/img/doctor.jpg" >      
+      <img src="/img/doctor.jpg" alt="Фото доктора" class="doctor-photo" />
+    </picture>
+    <picture>
+      <source type="image/webp" srcset="/img/doctor-mb.webp" >
+      <source type="image/jpeg" srcset="/img/doctor-mb.jpg" >      
+      <img
+        src="/img/doctor-mb.jpg"
+        alt="Фото доктора"
+        class="doctor-photo-mobile"
+      />
+    </picture>    
   </div>
   <!-- /.container-vs doctor-img -->
 </section>

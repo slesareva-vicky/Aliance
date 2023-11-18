@@ -25,7 +25,11 @@
 
 <section class="section expert">
   <div class="container-vs expert-img">
-    <img src="/img/expert.png" alt="Фото экспертов" class="expert-photo" />
+    <picture>
+      <source type="image/webp" srcset="/img/expert.webp" >
+      <source type="image/jpeg" srcset="/img/expert.png" >
+      <img src="/img/expert.png" alt="Фото экспертов" class="expert-photo" />
+    </picture>    
   </div>
   <!-- /.container-vs expert-img -->
   <div class="container">
@@ -65,7 +69,11 @@
         <div class="separator"></div>
         <h2 class="factory-title">Наше производство</h2>
         <div class="factory-img">
-          <img src="/img/factory.png" alt="Фото сотрудницы" />
+          <picture>
+            <source type="image/webp" srcset="/img/factory.webp" >
+            <source type="image/jpeg" srcset="/img/factory.png" >
+            <img src="/img/factory.png" alt="Фото сотрудницы" />
+          </picture>          
         </div>
         <p class="factory-text">
           Предварительные выводы неутешительны: разбавленное изрядной долей

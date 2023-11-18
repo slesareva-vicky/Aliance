@@ -2,8 +2,11 @@
     <section class="cta">
       <div class="bg-grey">
         <div class="container-vs cta-image-wrapper">
-          <img src="/img/cta.png" alt="call to action" class="cta-image" />
-
+          <picture>
+            <source type="image/webp" srcset="/img/cta.webp" >
+            <source type="image/jpeg" srcset="/img/cta.png" >
+            <img src="/img/cta.png" alt="call to action" class="cta-image" />
+          </picture>
           <div class="container cta-form-wrapper">
             <form action="/handler.php" method="POST" class="cta-form">
               <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
@@ -66,9 +69,12 @@
       <div class="footer-block">
         <div class="container">
           <div class="footer-top">
-            <svg class="footer-logo">
+          <a href="/" class="footer-logo">
+            <svg>
               <use href="/img/sprite.svg#logo-dark"></use>
             </svg>
+          </a>
+            
             <?php include_once ('include/aliance-info.php'); ?>
           </div>
           <!-- /.footer-top -->
@@ -236,7 +242,11 @@
             <use href="/img/sprite.svg#close"></use>
           </svg>
         </a>
-        <img src="/img/thanks_illu.png" alt="Спасибо за заявку" />
+        <picture>
+          <source type="image/webp" srcset="/img/thanks_illu.webp" >
+          <source type="image/jpeg" srcset="/img/thanks_illu.png" >
+          <img src="/img/thanks_illu.png" alt="Спасибо за заявку" />
+        </picture>        
         <h2 class="modal-title modal-title-thanks">Спасибо за заявку!</h2>
         <p class="modal-text modal-text-thanks">
           Наш менеджер свяжется с Вами в ближайшее время ответит на все

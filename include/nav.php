@@ -82,7 +82,7 @@
     />
     <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />    
     <link rel="icon" href="/img/aliance.ico" type="image/x-icon" />
     <script src="/js/swiper-bundle.min.js" defer></script>
     <script src="/js/just-validate.production.min.js" defer></script>
