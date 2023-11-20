@@ -1,10 +1,7 @@
-@import url("normalize.css");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans:wght@400;600;700&display=swap");
-@import url("swiper-bundle.min.css");
-
 * {
   box-sizing: border-box;
 }
+
 
 html {
   font-size: 16px;
@@ -13,10 +10,6 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-}
-
-body {
-  min-width: 320px;
 }
 
 @font-face {
@@ -123,6 +116,10 @@ h3.dark {
   transition: width 0.2s;
 }
 
+.button-text {
+  word-wrap: break-word; 
+}
+
 /* кнопки swipper: неактивные */
 .swiper-button-disabled,
 .swiper-button-disabled {
@@ -148,7 +145,9 @@ h3.dark {
 
 .transparent-button-prev svg,
 .transparent-button-next svg {
-  width: 52.16px;
+  max-width: 52.16px;
+  width:50%;
+  height: 100%;
   fill: white;
 }
 
@@ -208,9 +207,11 @@ h3.dark {
   position: absolute;
   padding: 39px 50px 41px 50px;
   max-width: 460px;
+  max-height: 100%;
   width: 100%;
   left: 50%;
   top: 50%;
+  overflow-y: auto;
   transform: translate(-50%, -60%);
   background-color: #fff;
   opacity: 0;
@@ -260,7 +261,7 @@ h3.dark {
 
 .modal-form-button {
   width: 100%;
-  height: 62px;
+  min-height: 62px;
   padding: 20px 50px;
   margin-bottom: 22px;
 }
@@ -350,10 +351,12 @@ h3.dark {
   flex-basis: 100%;
   display: flex;
   height: 100%;
-  padding: 0;
+  padding: 0;  
+  padding-right: 10px;
   align-items: center;
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 4.357%;  
 }
 
 .header-nav-item {
@@ -389,7 +392,7 @@ h3.dark {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 2%;
+  margin-right: 50px;
 }
 
 .header-phone-link {
@@ -400,6 +403,7 @@ h3.dark {
 
 .navbar-button {
   flex-shrink: 0;
+  max-width: 320px;
   height: 100%;
   padding: 25px 50px;
   background: #5C8EE5;
@@ -475,14 +479,17 @@ h1.header-title {
 }
 
 .features-wrapper {
-  display: flex;
+  display: flex;    
   position: relative;
   margin-top: 100px;
   margin-bottom: 0;
-  max-height: 168px;
+  min-height: 168px;
+  height: max-content !important;
   padding: 0;
   list-style: none;
-  color: var(--color);
+  color: var(--color);  
+
+  align-items: stretch !important;
 }
 
 .features_black .features-wrapper {
@@ -490,10 +497,14 @@ h1.header-title {
 }
 
 .features-item {
-  width: 288px;
-  min-height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;    
+  width: 288px;  
   border: 1px solid var(--border-color);
-  padding: 32px 50px 27px 50px;
+  padding: 32px 50px 27px 50px;    
 }
 
 .features-icon {
@@ -501,9 +512,10 @@ h1.header-title {
   height: 36px;
 }
 
-.features-text {
-  margin-top: 18px;
-}
+.features-text {  
+  margin-top: 18px;   
+  word-wrap: break-word;
+ }
 
 .features-buttons {
   display: none;
@@ -530,17 +542,23 @@ section.section-light .container .section-title {
 
 .steps {
   display: flex;
+  align-items: stretch !important;
   max-width: 1410px;
-  max-height: 267px;
+  min-height: 267px;
+  height: max-content !important;
   margin: 0;
   padding: 7px 0 0;
   list-style: none;
 }
 
 .steps-item {
+  flex-grow: 1;  
+  flex-shrink: 0; 
+
+  display: flex;  
+  flex-direction: column;
   width: 360px;
-  min-height: 100%;
-  padding-right: 30px;
+  padding-right: 30px; 
 }
 
 .steps-num {
@@ -565,6 +583,7 @@ h3.steps-title {
   width: 300px;
   width: 85%;
   margin: 35px 0 10px;
+  word-wrap: break-word ;
 }
 
 .steps-text {
@@ -572,6 +591,7 @@ h3.steps-title {
   width: 92%;
   margin: 10px 0 20px;
   color: #828A99;
+  word-wrap: break-word ;
 }
 
 .steps-buttons {
@@ -787,18 +807,22 @@ section.blog .container .section-title {
   height: 54.93vw;
 }
 
+.blog-slide {
+  max-width: 705px;
+  min-height: unset;
+  height: 100%;  
+}
+
 .blog-card {
   display: flex;
   position: relative;
-  max-width: 705px;
-  min-height: unset;
+  width: 100%;
   height: 100%;
   flex-direction: column;
   text-decoration: none;
   justify-content: flex-end;
   padding: 3.125rem;
   color: #fff;
-  transition: height 0.2s;
 }
 
 .blog-card::before {
@@ -957,6 +981,7 @@ input::placeholder {
 
 .cta-form-button {
   flex-shrink: 0;
+  width: 50%;
   font-size: 14px;
   font-weight: 700;
   padding: 22px 50px;
@@ -1449,8 +1474,11 @@ section.mission {
   object-fit: contain;
 }
 
-.mission-img-mobile {
+.mission-img-mobile,
+.mission-img-desktop {
   display: none;
+  width: 100%;
+  height: 100%;
 }
 
 .mission-content {
@@ -1723,7 +1751,7 @@ section.blogs {
   height: 100%;
 }
 
-.blogs-slider-slide-block .blog-card {
+.blogs-slider-slide-block .blog-card {  
   width: calc((100% - 30px) / 2);
   height: calc((100% - 120px) / 5);
 }
@@ -1899,7 +1927,7 @@ section.blog-more {
   display: none;
 }
 
-section.contact {
+.contact {
   margin-top: 50px;
 }
 
@@ -1967,11 +1995,11 @@ section.contact {
   background-position: bottom right;
 }
 
-section.politics {
+.politics {
   margin-top: 79px;
 }
 
-section.err404 {
+.err404 {
   padding-top: 218px;
 }
 
@@ -2012,12 +2040,12 @@ section.err404 {
 .err404-button {
   max-width: 302px;
   width: 100%;
-  height: 76px;
+  min-height: 76px;
   font-weight: 600;
 }
 
 /* hover effects */
-@media (hover:hover) {
+@media (min-width: 992px) and (hover:hover) {
 
   .header-nav-link:hover::after {
     width: 100%;
@@ -2069,11 +2097,6 @@ section.err404 {
 }
 
 @media (max-width: 1700px) {
-
-  .header-phone {
-    display: none;
-  }
-
   .header-image {
     background-position: center;
   }
@@ -2223,8 +2246,10 @@ section.err404 {
   }
 }
 
-
-@media (max-width: 1460px) {
+@media (max-width: 1550px) {
+  .header-nav {   
+    gap: 1.5%;  
+  }
 
   .navbar-button {
     width: 80px;
@@ -2243,6 +2268,9 @@ section.err404 {
     width: 100%;
     height: 100%;
   }
+}
+
+@media (max-width: 1460px) {
 
   .features-buttons {
     display: flex;
@@ -2268,7 +2296,7 @@ section.err404 {
     width: auto;
   }
 
-  section.contact {
+  .contact {
     margin-top: 22px;
   }
 
@@ -2333,6 +2361,9 @@ section.err404 {
 }
 
 @media (max-width: 1200px) {
+  .header-phone {
+    display: none;
+  }
 
   .trademark-cards {
     flex-direction: column;
@@ -2629,7 +2660,7 @@ section.err404 {
   .features-wrapper,
   .features_black .features-wrapper {
     margin-top: 50px;
-    max-height: 140px;
+    min-height: 140px;
   }
 
   .features-item {
@@ -2658,7 +2689,7 @@ section.err404 {
   }
 
   .steps {
-    max-height: 218px;
+    min-height: 218px;
     margin-bottom: 20px;
   }
 
@@ -2686,7 +2717,7 @@ section.err404 {
 
   .card {
     max-width: 345px;
-    height: 429px;
+    min-height: 429px;
   }
 
   .card-content {
@@ -2854,6 +2885,7 @@ section.err404 {
     position: relative;
     top: 35px;
     left: -15px;
+    width:100vw;
     margin-bottom: 33px;
   }
 
@@ -2882,6 +2914,7 @@ section.err404 {
 
   .ag-tech-img-mobile {
     display: block;
+    width: 100vw;
   }
 
   .ag-tech-content {
@@ -2937,6 +2970,7 @@ section.err404 {
     display: block;
     position: relative;
     left: -15px;
+    width: 100vw;
   }
 
   section.blog-more {
@@ -3023,7 +3057,7 @@ section.err404 {
     gap: 10px;
   }
 
-  .blogs-slider-slide-block .blog-card {
+  .blogs-slider-slide-block .blog-card {  
     width: 100%;
     height: calc((100% - 90px) / 10);
   }
@@ -3087,8 +3121,6 @@ section.err404 {
   }
 
   .modal-form-button {
-    width: 100%;
-    height: 62px;
     margin-bottom: 20px;
   }
 
@@ -3389,11 +3421,11 @@ section.err404 {
     align-items: flex-start;
   }
 
-  section.politics {
+  .politics {
     margin-top: 98px;
   }
 
-  section.err404 {
+  .err404 {
     padding-top: 148px;
   }
 
@@ -3413,7 +3445,7 @@ section.err404 {
 
   .err404-button {
     max-width: unset;
-    height: 62px;
+    min-height: 62px;
     font-weight: 700;
     line-height: 12px;
   }
@@ -3428,4 +3460,10 @@ section.err404 {
     height: 195.545px;
   }
 
+}
+
+@media (max-width: 310px) {
+  .header-logo {
+    display: none;
+  }
 }

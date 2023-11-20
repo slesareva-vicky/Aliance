@@ -2,33 +2,9 @@
   $page_head_mode['style'] = 'bg-grey';
   $page_head_mode['leiba_src'] = "/img/in_page";
   $page_head_mode['leiba_alt'] = "графитовая смазка";
+  
+  include_once ('include/page-head.php');
 ?>
-<style>
-  section.centr {
-    margin-top: 149px;
-  }
-  section.clients {
-    margin-top: 151px;
-  }
-  @media (max-width: 768px) {
-    section.section-light {
-      margin-top: 101px;
-    }
-  }
-  @media (max-width: 576px) {
-    section.centr {
-      margin-top: 99px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    section.clients {
-      margin-top: 100px;
-    }
-  }
-</style>
-
-<?php  include_once ('include/page-head.php'); ?>
 
 <section class="ag-tech">
   <div class="container">

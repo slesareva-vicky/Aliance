@@ -1,27 +1,7 @@
 <?php  
   $page_head_mode['style'] = 'bg-grey';
-?> 
-<style>
-  .founder-button-link {
-    display: none;
-  }
-  .section.clients {
-    margin-top: 150px;
-  }
-  @media (max-width: 576px) {
-    .section.founder {
-      margin-top: 69px;
-    }
-    .founder-photo {
-      margin-bottom: 13px;
-    }
-    .section.clients {
-      margin-top: 99px;
-    }
-  }
-</style>
-
-<?php  include_once ('include/page-head.php'); ?>
+  include_once ('include/page-head.php');
+?>
 
 <section class="section expert">
   <div class="container-vs expert-img">

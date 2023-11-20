@@ -3,8 +3,8 @@
   <div class="separator"></div>
   <h2 class="section-title">схема работы</h2>
   <div class="swiper steps-slider">
-    <ol class="swiper-wrapper steps">
-      <li class="swiper-slide steps-item">
+    <div class="swiper-wrapper steps">
+      <div class="swiper-slide steps-item">
         <span class="steps-num">01</span>
         <h3 class="steps-title dark">Знакомство</h3>
         <p class="steps-text">
@@ -14,31 +14,31 @@
         <div class="button-link" data-modal="modal-form">
           Оставить заявку
         </div>
-      </li>
-      <li class="swiper-slide steps-item">
+      </div>
+      <div class="swiper-slide steps-item">
         <span class="steps-num">02</span>
         <h3 class="steps-title dark">Заключение договора</h3>
         <p class="steps-text">
           Лишь интерактивные прототипы призваны к ответу.
         </p>
-      </li>
-      <li class="swiper-slide steps-item">
+      </div>
+      <div class="swiper-slide steps-item">
         <span class="steps-num">03</span>
         <h3 class="steps-title dark">Производство</h3>
         <p class="steps-text">
           А также стремящиеся вытеснить традиционное производство,
           нанотехнологии функционально разнесены на независимые элементы.
         </p>
-      </li>
-      <li class="swiper-slide steps-item">
+      </div>
+      <div class="swiper-slide steps-item">
         <span class="steps-num">04</span>
         <h3 class="steps-title dark">Доставка</h3>
         <p class="steps-text">
           В частности, экономическая повестка сегодняшнего дня говорит о
           возможностях приоритизации разума над эмоциями.
         </p>
-      </li>
-    </ol>
+      </div>
+    </div>
     <div class="steps-buttons primary-buttons-wrapper">
       <div class="steps-button-prev primary-button-prev">
         <svg>

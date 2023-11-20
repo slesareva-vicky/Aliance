@@ -1,6 +1,6 @@
 ﻿<!-- блоки контактов aliance  -->
-<a href="tel:+79597771014" class="aliance-phone"
-  >+7 (959) 777-10-14</a
+<a href="tel:01234567890" class="aliance-phone"
+  >01234 567 890</a
 >
 <div class="aliance-info aliance-address">
   <svg class="svg-box">
@@ -16,10 +16,10 @@
     <use href="/img/sprite.svg#mail"></use>
   </svg>
   <a
-    href="mailto:a.dragunov@tdaliance.ru"
+    href="mailto:example@example.com"
     class="aliance-info-email"
   >
-    a.dragunov@tdaliance.ru
+    Example Email
   </a>
 </div>
 <!-- /.aliance-info -->

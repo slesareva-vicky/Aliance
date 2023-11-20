@@ -2,22 +2,7 @@
   $breadcrumb = make_breadcrumb( $_SESSION['currentpages'], $nav_index);
   $index_page = count($breadcrumb)-1; 
 ?>
-<style>
-  .cta {
-    display: none;
-  }
-
-  .footer {
-    margin-top: 146px;
-  }
-  @media (max-width: 380px) {
-    .footer {
-      margin-top: 91px;
-    }
-  }
-</style>
-
-<section class="err404">
+<div class="err404">
   <div class="container">
     <div class="err404-wrapper">
       <div class="err404-number"><? echo $breadcrumb[$index_page][0]; ?></div>
@@ -30,12 +15,5 @@
     </div>
   </div>
   <!-- /.container -->
-</section>
+</div>
 <!-- /.404 -->
-
-
-
-
-
-
-

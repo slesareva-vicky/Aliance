@@ -2,40 +2,9 @@
   $page_head_mode['style'] = 'bg-grey';
   $page_head_mode['leiba_src'] = "/img/in_page";
   $page_head_mode['leiba_alt'] = "графитовая смазка";
+  
+  include_once ('include/page-head.php'); 
 ?>
-
-<style>
-   section.centr {
-     margin-top: 119px;
-   }
-   section.clients {
-     margin-top: 154px;
-   }
-
-   @media (max-width: 992px) {
-     section.clients {
-       margin-top: 100px;
-     }
-   }
-
-   @media (max-width: 820px) {
-     section.cta {
-       margin-top: 97px;
-     }
-   }
-   @media (max-width: 768px) {
-     section.section-light {
-       margin-top: 102px;
-     }
-   }
-   @media (max-width: 576px) {
-     section.centr {
-       margin-top: 65px;
-     }
-   }
-</style>
-
-<?php  include_once ('include/page-head.php'); ?>
 
 <section class="mission">
   <div class="container">

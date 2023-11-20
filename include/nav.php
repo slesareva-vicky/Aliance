@@ -7,8 +7,6 @@
   $tcurrentpath ='pages';
   $tcurrentpages = preg_replace(patternPages,"", $_SERVER['REQUEST_URI']);
   
-  echo '<script>alert("='.$tcurrentpages.'"=)</script>';
-    
   // переход на страницы
   if ( $tcurrentpages =='/index' || $tcurrentpages =='/') {
     $_SESSION['currentpath']='';	
@@ -38,9 +36,11 @@
     'Контакты'=>'/contact',
     'Блог'=>'/blog',
     "Современная методология разработки одухотворила всех причастных"=>'/blog/more', 
-    'Политика конфиденциальности'=>'/politics',       
+    "Политика конфиденциальности"=>'/politics',
+    "Aliance Production: Комплексное обеспечение товарами и расходными материалами бизнеса"=>'/index',      
   );	
-
+  $title_page = array_search($_SESSION['currentpages'],$nav_index) ;
+  
   /* пункты меню */
   $main_menu=array(
     'О компании'=>['/about'],
@@ -67,7 +67,8 @@
     'leiba_src' =>'',
     'leiba_alt' =>''
   ];
-?>
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -75,7 +76,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
+    <link rel="stylesheet" href="/css/css2.css" />   
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />     
     <link rel="stylesheet" href="/css/style.css" />    
     <link rel="icon" href="/img/aliance.ico" type="image/x-icon" />
     <script src="/js/modernizr-custom.js"></script>
@@ -83,7 +87,174 @@
     <script src="/js/just-validate.production.min.js" defer></script>
     <script src="/js/helper.js" defer></script>
     <script src="/js/main.js" defer></script>
-    <title>О компании - Aliance Production</title>
+    <title><?php echo $title_page; ?></title>
+    <?php 
+      echo "<style>";
+      switch ($_SESSION['currentpages']) {
+        case "/404";
+          echo "
+          .cta {
+            display: none;
+          }          
+          .footer {
+            margin-top: 146px;
+          }
+          @media (max-width: 380px) {
+            .footer {
+              margin-top: 91px;
+            }
+          }
+          ";
+          break;
+
+        case "/about";
+          echo "
+          .founder-button-link {
+            display: none;
+          }
+          .section.clients {
+            margin-top: 150px;
+          }
+          @media (max-width: 576px) {
+            .section.founder {
+              margin-top: 69px;
+            }
+            .founder-photo {
+              margin-bottom: 13px;
+            }
+            .section.clients {
+              margin-top: 99px;
+            }
+          }
+          ";
+          break;
+
+        case "/contract";
+          echo "
+          .cards {
+            margin-top: 98px;
+          }
+          @media (max-width: 768px) {
+            .cards {
+              margin-top: 49px;
+            }
+          }
+          ";
+          break;
+        case "/contract/avtohim";
+          echo "
+          section.centr {
+            margin-top: 119px;
+          }
+          section.clients {
+            margin-top: 154px;
+          }
+       
+          @media (max-width: 992px) {
+            section.clients {
+              margin-top: 100px;
+            }
+          }
+       
+          @media (max-width: 820px) {
+            section.cta {
+              margin-top: 97px;
+            }
+          }
+          @media (max-width: 768px) {
+            section.section-light {
+              margin-top: 102px;
+            }
+          }
+          @media (max-width: 576px) {
+            section.centr {
+              margin-top: 65px;
+            }
+          }
+          ";
+          break;
+
+        case "/own";
+          echo "
+          .trademark-cards {
+            margin-top: 98px;
+          }
+          @media (max-width: 820px) {
+            section.cta {
+              margin-top: 97px;
+            }
+          }
+          @media (max-width: 576px) {
+            .trademark-cards {
+              margin-top: 50px;
+            }
+          }
+          ";
+          break;
+
+        case "/own/ag-tech";
+          echo "
+          section.centr {
+             margin-top: 149px;
+           }
+           section.clients {
+             margin-top: 151px;
+           }
+           @media (max-width: 768px) {
+             section.section-light {
+               margin-top: 101px;
+             }
+           }
+           @media (max-width: 576px) {
+             section.centr {
+               margin-top: 99px;
+             }
+           }         
+           @media (max-width: 992px) {
+             section.clients {
+               margin-top: 100px;
+             }
+           }
+          ";
+          break;
+        
+        case "/blog/more"; 
+          echo "
+          .blog-slider-footer {
+            justify-content: flex-end;
+          }
+          .blog-slider-footer .button-link {
+            display: none;
+          }
+          @media (max-width: 820px) {
+            section.cta {
+              margin-top: 96px;
+            }
+            footer {
+              margin-top: 0;
+            }
+          }
+          ";
+          break;
+
+        case "/politics";          
+          echo "
+          .cta {
+            display: none;
+          }
+          .footer {
+            margin-top: 126px;
+          }
+          @media (max-width: 380px) {
+            .footer {
+              margin-top: 82px;
+            }
+          }
+          ";
+          break;        
+      }
+      echo "</style>";
+    ?>
   </head>
 
   <body <?php echo ($_SESSION['currentpages']=='/index') ? 'class="front-page"': "" ;?> >    
@@ -120,8 +291,8 @@
         <svg class="icon24blue">
           <use href="/img/sprite.svg#mail"></use>
         </svg>
-        <a href="mailto:a.dragunov@tdaliance.ru" class="mobile-info-email">
-          a.dragunov@tdaliance.ru
+        <a href="mailto:example@example.com" class="mobile-info-email">
+          Example Email
         </a>
       </div>
       <!-- /.mobile-info -->
@@ -169,8 +340,8 @@
         <svg class="icon24blue">
           <use href="/img/sprite.svg#phone"></use>
         </svg>
-        <a href="tel:+74996861014" class="header-phone-link">
-          +7 (499) 686-10-14
+        <a href="tel:01234567890" class="header-phone-link">
+          01234 567 890
         </a>
       </div>
       <!-- /.header-phone -->

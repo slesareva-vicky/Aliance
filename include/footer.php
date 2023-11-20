@@ -69,13 +69,12 @@
       <div class="footer-block">
         <div class="container">
           <div class="footer-top">
-          <a href="/" class="footer-logo">
-            <svg>
-              <use href="/img/sprite.svg#logo-dark"></use>
-            </svg>
-          </a>
-            
-            <?php include_once ('include/aliance-info.php'); ?>
+            <a href="/" class="footer-logo">
+              <svg>
+                <use href="/img/sprite.svg#logo-dark"></use>
+              </svg>
+            </a>            
+            <?php include ('include/aliance-info.php'); ?>
           </div>
           <!-- /.footer-top -->
         </div>

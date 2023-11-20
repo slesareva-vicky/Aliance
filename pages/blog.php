@@ -1,8 +1,5 @@
 <?php  
   $page_head_mode['style'] = 'bg-grey';  
-?>
-
-<?php 
   include_once ('include/page-head.php'); 
 ?>
 

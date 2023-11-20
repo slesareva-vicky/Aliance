@@ -35,7 +35,6 @@ class Picture {
     // обычный посимвольный ввод
     if (type === "insertText") {
       const inputChar = input.value.slice(caret - 1, caret).replace(/[^\d]/, '');
-      console.log(inputChar ? inputChar : "no");
       const bufferPosition = inputChar ? this._mapBuffer.findIndex(pos => pos >= caret - 1) : -1;
 
       if (~bufferPosition) {

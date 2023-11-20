@@ -1,22 +1,9 @@
 <?php  
   $page_head_mode['style'] = 'bg-grey';     
 
+  include_once ('include/page-head.php');
 ?>
-<style>
-  .cta {
-    display: none;
-  }
-  .footer {
-    margin-top: 126px;
-  }
-  @media (max-width: 380px) {
-    .footer {
-      margin-top: 82px;
-    }
-  }
-</style>
-<?php include_once ('include/page-head.php'); ?>
-<section class="politics">
+<div class="politics">
   <div class="container">
     <p class="bm-p">
       Внезапно, тщательные исследования конкурентов призывают нас к новым
@@ -90,5 +77,5 @@
     </p>
   </div>
   <!-- /.container -->
-</section>
+</div>
 <!-- /.politics -->

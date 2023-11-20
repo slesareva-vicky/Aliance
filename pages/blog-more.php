@@ -1,25 +1,5 @@
 <?php
   $page_head_mode['style'] = 'header-page-image';
-?>
-
-<style>
-  .blog-slider-footer {
-    justify-content: flex-end;
-  }
-  .blog-slider-footer .button-link {
-    display: none;
-  }
-  @media (max-width: 820px) {
-    section.cta {
-      margin-top: 96px;
-    }
-    footer {
-      margin-top: 0;
-    }
-  }
-</style>
-
-<?php 
   include_once ('include/page-head.php'); 
 ?>
 

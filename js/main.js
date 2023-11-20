@@ -6,10 +6,16 @@ const menu = document.querySelector(".mobile-menu");
 const body = document.querySelector("body");
 const listModal = {
   list: [],
-  open: modal => { listModal.list.push(modal); modal.classList.add("is-open"); return modal; },
+  open: modal => { 
+    listModal.list.push(modal); 
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden"; 
+    return modal; 
+  },
   close: () => { 
     let modal = (listModal.list.length > 0 )? listModal.list.pop() : null; 
-    if(modal) {modal.classList.remove("is-open");} 
+    if(modal) {modal.classList.remove("is-open");}
+    if (listModal.list.length == 0) document.body.style.overflow = ""; 
     return modal; 
   }
 };
@@ -192,10 +198,12 @@ forms.forEach((form) => {
         value: 50,
         errorMessage: "Максимально 50 символов",
       },
-    ])
+    ])    
     .addField("[name=userphone]", [
       {
-        rule: 'required',
+        validator: (value) => {
+          return value.replace(/[^\d]+/g, '').length === 11;
+        },
         errorMessage: 'Укажите телефон',
       },
     ])

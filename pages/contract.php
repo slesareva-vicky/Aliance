@@ -1,26 +1,12 @@
 <?php
   $page_head_mode['style'] = 'bg-grey';
 
-?>
-<style>
-  .cards {
-    margin-top: 98px;
-  }
-  @media (max-width: 768px) {
-    .cards {
-      margin-top: 49px;
-    }
-  }
-</style>
-
-<?php 
   include_once ('include/page-head.php'); 
   include_once ('include/production.php');
 ?>
-
     <section class="seo">
       <div class="container">
-        <h3 seo-title>SEO Заголовок</h3>
+        <h3 class="seo-title">SEO Заголовок</h3>
         <p class="seo-text">
           Также как дальнейшее развитие различных форм деятельности предполагает
           независимые способы реализации существующих финансовых и
