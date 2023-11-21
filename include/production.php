@@ -9,15 +9,13 @@
           оценить значение форм воздействия.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/avto-him.webp" >
-        <source type="image/jpeg" srcset="/img/avto-him.png" >
-        <img
-          src="/img/avto-him.png"
-          alt="Автомобильная химия"
-          class="card-image"
-        />
-      </picture>     
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/avto-him.webp" >
+          <source type="image/jpeg" srcset="/img/avto-him.png" >
+          <img src="/img/avto-him.png" alt="Автомобильная химия"/>
+        </picture>  
+      </div>         
     </a>
     <a href="/404" class="card">
       <div class="card-content">
@@ -27,11 +25,13 @@
           нанотехнологии функционально разнесены на независимые элементы.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/bit-him.webp" >
-        <source type="image/jpeg" srcset="/img/bit-him.png" >
-        <img src="/img/bit-him.png" alt="Бытовая химия" class="card-image" />
-      </picture>      
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/bit-him.webp" >
+          <source type="image/jpeg" srcset="/img/bit-him.png" >
+          <img src="/img/bit-him.png" alt="Бытовая химия" />
+        </picture>  
+      </div>          
     </a>
     <a href="/404" class="card">
       <div class="card-content">
@@ -40,15 +40,13 @@
           Лишь интерактивные прототипы призваны к ответу.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/dezinfect.webp" >
-        <source type="image/jpeg" srcset="/img/dezinfect.png" >
-        <img
-          src="/img/dezinfect.png"
-          alt="Дезинфицирующие средства"
-          class="card-image"
-        />
-      </picture>       
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/dezinfect.webp" >
+          <source type="image/jpeg" srcset="/img/dezinfect.png" >
+          <img src="/img/dezinfect.png" alt="Дезинфицирующие средства"/>
+        </picture>  
+      </div>          
     </a>
     <a href="/404" class="card">
       <div class="card-content">
@@ -58,15 +56,13 @@
           оценить значение форм воздействия.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/dezinfect.webp" >
-        <source type="image/jpeg" srcset="/img/dezinfect.png" >
-        <img
-          src="/img/dezinfect.png"
-          alt="Пищевые аэрозоли"
-          class="card-image"
-        />
-      </picture>       
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/dezinfect.webp" >
+          <source type="image/jpeg" srcset="/img/dezinfect.png" >
+          <img src="/img/dezinfect.png" alt="Пищевые аэрозоли" />
+        </picture>  
+      </div>           
     </a>
     <a href="/404" class="card">
       <div class="card-content">
@@ -75,15 +71,13 @@
           Лишь интерактивные прототипы призваны к ответу.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/avto-him.webp" >
-        <source type="image/jpeg" srcset="/img/avto-him.png" >
-        <img
-          src="/img/avto-him.png"
-          alt="Косметическая продукция"
-          class="card-image"
-        />
-      </picture>    
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/avto-him.webp" >
+          <source type="image/jpeg" srcset="/img/avto-him.png" >
+          <img src="/img/avto-him.png" alt="Косметическая продукция" />
+        </picture>  
+      </div>       
     </a>
     <a href="/404" class="card">
       <div class="card-content">
@@ -93,15 +87,13 @@
           нанотехнологии функционально разнесены на независимые элементы.
         </p>
       </div>
-      <picture>
-        <source type="image/webp" srcset="/img/bit-him.webp" >
-        <source type="image/jpeg" srcset="/img/bit-him.png" >
-        <img
-          src="/img/bit-him.png"
-          alt="Краски аэрозольные"
-          class="card-image"
-        />
-      </picture>
+      <div class="card-image">
+        <picture>
+          <source type="image/webp" srcset="/img/bit-him.webp" >
+          <source type="image/jpeg" srcset="/img/bit-him.png" >
+          <img src="/img/bit-him.png" alt="Краски аэрозольные"/>
+        </picture>
+      </div>      
     </a>
   </div>
 </div>

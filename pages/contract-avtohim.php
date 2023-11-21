@@ -142,20 +142,21 @@
         </ul>
       </div>
     </div>
-    <picture>
-      <source type="image/webp" srcset="/img/doctor.webp" >
-      <source type="image/jpeg" srcset="/img/doctor.jpg" >      
-      <img src="/img/doctor.jpg" alt="Фото доктора" class="doctor-photo" />
-    </picture>
-    <picture>
-      <source type="image/webp" srcset="/img/doctor-mb.webp" >
-      <source type="image/jpeg" srcset="/img/doctor-mb.jpg" >      
-      <img
-        src="/img/doctor-mb.jpg"
-        alt="Фото доктора"
-        class="doctor-photo-mobile"
-      />
-    </picture>    
+    <div class="doctor-photo">
+      <picture>
+        <source type="image/webp" srcset="/img/doctor.webp" >
+        <source type="image/jpeg" srcset="/img/doctor.jpg" >      
+        <img src="/img/doctor.jpg" alt="Фото доктора" />
+      </picture>
+    </div>
+    <div class="doctor-photo-mobile">
+      <picture>
+        <source type="image/webp" srcset="/img/doctor-mb.webp" >
+        <source type="image/jpeg" srcset="/img/doctor-mb.jpg" >      
+        <img src="/img/doctor-mb.jpg" alt="Фото доктора" />
+      </picture>   
+    </div>
+    
   </div>
   <!-- /.container-vs doctor-img -->
 </section>

@@ -1,10 +1,12 @@
 <!-- section class="section founder"-->
 <div class="container-vs founder-img">
-  <picture>
-    <source type="image/webp" srcset="/img/founder.webp" >
-    <source type="image/jpeg" srcset="/img/founder.jpg" >
-    <img src="/img/founder.jpg" alt="Фото основателя" class="founder-photo">
-  </picture>  
+  <div class="founder-photo">
+    <picture>
+      <source type="image/webp" srcset="/img/founder.webp" >
+      <source type="image/jpeg" srcset="/img/founder.jpg" >
+      <img src="/img/founder.jpg" alt="Фото основателя">
+    </picture>  
+  </div> 
 </div>
 <!-- /.container-vs founder-img -->
 <div class="container">

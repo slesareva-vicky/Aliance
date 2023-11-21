@@ -16,14 +16,16 @@
                 <a href="/" class="breadcrumb-link">Главная</a>
               </li>
               <?php
-                 for( $i=0; $i < $index_page+1; ++$i) {
-                   echo '<li class="breadcrumb-separator">—</li>';						
-                   echo '<li class="breadcrumb-item">';
-                   echo ( $i < $index_page ) ?             
-                    '<a href="'.$breadcrumb[$i][1].'" class="breadcrumb-link">'.$breadcrumb[$i][0].'</a>' :
-                    '<li class="breadcrumb-item">'.$breadcrumb[$i][0].'</li>'; 
-                   echo '</li>';
-                  }
+                for( $i=0; $i < $index_page+1; ++$i) {
+                  echo '<li class="breadcrumb-separator">—</li>';					
+                  if ( $i < $index_page ) {
+                    echo '<li class="breadcrumb-item">';
+                    echo '<a href="'.$breadcrumb[$i][1].'" class="breadcrumb-link">'.$breadcrumb[$i][0].'</a>';
+                    echo '</li>';
+                  } else {
+                    echo '<li class="breadcrumb-item">'.$breadcrumb[$i][0].'</li>'; 
+                  }                  
+                }
               ?>  
             </ul>
           </div>

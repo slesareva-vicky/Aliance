@@ -30,7 +30,7 @@
     'Косметическая продукция'=>'/404',
     'Краски аэрозольны'=>'/404',
     'Собственные торговые марки'=>'/own',
-    'Автохимия AG-Tec'=>'/own/ag-tech',
+    'Автохимия AG-Tech'=>'/own/ag-tech',
     'Автохимия AP'=>'/404',      
     'Новости'=>'/404',
     'Контакты'=>'/contact',
@@ -53,7 +53,7 @@
       'Краски аэрозольны'=>'/404',
     ]],
     'Собственные торговые марки'=>['/own',[
-      'Автохимия AG-Tec'=>'/own/ag-tech',
+      'Автохимия AG-Tech'=>'/own/ag-tech',
       'Автохимия AP'=>'/404',
       ]],
     'Новости'=>['/404'],
@@ -117,13 +117,16 @@
           }
           @media (max-width: 576px) {
             .section.founder {
-              margin-top: 69px;
+              margin-top: 71px;
             }
             .founder-photo {
               margin-bottom: 13px;
             }
             .section.clients {
-              margin-top: 99px;
+              margin-top: 100px;
+            }
+            section.cta {
+              margin-top: 96px;
             }
           }
           ";
@@ -138,37 +141,40 @@
             .cards {
               margin-top: 49px;
             }
+            section.cta {
+              margin-top: 96px;
+              padding-top: 0;
+            }
           }
           ";
           break;
+
         case "/contract/avtohim";
           echo "
           section.centr {
-            margin-top: 119px;
+            margin-top: 96px;
           }
           section.clients {
-            margin-top: 154px;
-          }
-       
+            margin-top: 124px;
+          }       
           @media (max-width: 992px) {
             section.clients {
-              margin-top: 100px;
+              margin-top: 101px;
             }
-          }
-       
+          }       
           @media (max-width: 820px) {
             section.cta {
-              margin-top: 97px;
+              margin-top: 95px;
             }
           }
           @media (max-width: 768px) {
             section.section-light {
-              margin-top: 102px;
+              margin-top: 100px;
             }
           }
           @media (max-width: 576px) {
             section.centr {
-              margin-top: 65px;
+              margin-top: 42px;
             }
           }
           ";
@@ -178,11 +184,6 @@
           echo "
           .trademark-cards {
             margin-top: 98px;
-          }
-          @media (max-width: 820px) {
-            section.cta {
-              margin-top: 97px;
-            }
           }
           @media (max-width: 576px) {
             .trademark-cards {
@@ -195,10 +196,10 @@
         case "/own/ag-tech";
           echo "
           section.centr {
-             margin-top: 149px;
+             margin-top: 124px;
            }
            section.clients {
-             margin-top: 151px;
+             margin-top: 124px;
            }
            @media (max-width: 768px) {
              section.section-light {
@@ -207,12 +208,21 @@
            }
            @media (max-width: 576px) {
              section.centr {
-               margin-top: 99px;
+               margin-top: 76px;
+             }
+             section.cta {
+              margin-top: 96px;
              }
            }         
            @media (max-width: 992px) {
              section.clients {
                margin-top: 100px;
+             }             
+           }
+
+           @media (max-width: 1200px) {
+             .book-content .section-title {
+               font-size: 36px;
              }
            }
           ";
@@ -225,15 +235,7 @@
           }
           .blog-slider-footer .button-link {
             display: none;
-          }
-          @media (max-width: 820px) {
-            section.cta {
-              margin-top: 96px;
-            }
-            footer {
-              margin-top: 0;
-            }
-          }
+          }          
           ";
           break;
 
@@ -247,7 +249,10 @@
           }
           @media (max-width: 380px) {
             .footer {
-              margin-top: 82px;
+              margin-top: 84px;
+            }
+            .header-page-title {
+              max-width: 315px;
             }
           }
           ";
@@ -257,7 +262,7 @@
     ?>
   </head>
 
-  <body <?php echo ($_SESSION['currentpages']=='/index') ? 'class="front-page"': "" ;?> >    
+  <body <?php echo ($_SESSION['currentpages']=='/index') ? 'class="front-page"': "" ;?> > 
     <div class="mobile-menu">
       <ul class="mobile-menu-nav">
       <?php
